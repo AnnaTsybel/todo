@@ -1,0 +1,10 @@
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-info {
+    width: 80%;
+    background: $main-bg;
+    background: $main-bg-gradient;
+}

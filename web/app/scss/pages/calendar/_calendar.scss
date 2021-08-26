@@ -1,0 +1,17 @@
+table {
+    background: white;
+    table-layout: fixed;
+    margin: 4rem 3rem;
+    width: 96%;
+    border-collapse: collapse;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+}
+
+thead th {
+    padding: 1rem;
+}
+
+tbody td {
+    text-align: center;
+}

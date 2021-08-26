@@ -1,0 +1,4 @@
+web/.gulp-scss-cache
+web/.sass-cache
+web/dist
+web/node_modules

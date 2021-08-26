@@ -1,0 +1,22 @@
+/* components*/
+
+@import "components/variables";
+@import "components/mixins";
+
+/* typography*/
+
+@import "typography/typography";
+
+/*default-styles*/
+
+@import "aside/aside-menu";
+@import "calendar/calendar";
+@import "default/default";
+@import "header";
+@import "_section-increase-productivity";
+@import "section-info";
+@import "select-style";
+@import "tasks-section";
+@import "tasks-to-do";
+@import "circles";
+@import "entering-page";

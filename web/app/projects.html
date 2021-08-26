@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <aside class="aside">
+            <div id="aside" class="menu-user">
+                <div class="menu-user__photo-user">
+                    <img src="images/dest/no_avatar.png">
+                </div>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><img src="images/dest/icons/home.png" alt="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/dest/icons/bar-chart.png" alt="stats">Stats</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active"><img src="images/dest/icons/home.png" alt="projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/dest/icons/calendar.png" alt="calendar">Calendar</a>
+                    </li>
+                </ul>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><img src="images/dest/icons/settings.png" alt="settings">Settings </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/dest/icons/export.png" alt="log out">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-info">
+            <header class="header">
+                <div class="header__search">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header__info">
+                    <a class="header__help" href="#"><img src="images/dest/icons/help.png" alt="help"></a>
+                    <a class="header__notification " href="#"><img src="images/dest/icons/notification.png" alt="notification"></a>
+                    <a class="header__profile-change" href="#">Name Surname</a>
+                </div>
+
+            </header>
+            <div class="section-info">
+                <h1 class="section-info__header">Projects</h1>
+                <div class="select">
+                    <div class="select__header">
+                        <span id="week" class="select__current">This week</span>
+                        <img class="select__icon" src="images/dest/icons/arrow-down.png" alt="arrow-down">
+                    </div>
+                    <div class="select__body">
+                        <div id="day" class="select__item">This day</div>
+                        <div id="week" class="select__item">This week</div>
+                        <div id="month" class="select__item">This month</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="tasks__elements">
+                    <h2 class="tasks__header">To do</h2>
+                    <button class="tasks__add">+</button>
+                    <div class=" tasks__to-do">
+                        <button class=" tasks__to-do__delete"><img src="images/dest/icons/delete.png" alt="delete"></button>
+                        <h3 class=" tasks__to-do__header">Lorem ipsum</h3>
+                        <p class=" tasks__to-do__info">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit, in consequat
+                            eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc eleifend eros, a malesuada
+                            mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                        <p class=" tasks__to-do__deadline">11.04.2021</p>
+                    </div>
+                    <div class=" tasks__to-do">
+                        <button class=" tasks__to-do__delete"><img src="images/dest/icons/delete.png" alt="delete"></button>
+                        <h3 class=" tasks__to-do__header">Lorem ipsum</h3>
+                        <p class=" tasks__to-do__info">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit, in consequat
+                            eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc eleifend eros, a malesuada
+                            mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                        <p class=" tasks__to-do__deadline">11.04.2021</p>
+                    </div>
+                    <div class=" tasks__to-do">
+                        <button class=" tasks__to-do__delete"><img src="images/dest/icons/delete.png" alt="delete"></button>
+                        <h3 class=" tasks__to-do__header">Lorem ipsum</h3>
+                        <p class=" tasks__to-do__info">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit, in consequat
+                            eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc eleifend eros, a malesuada
+                            mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                        <p class=" tasks__to-do__deadline">11.04.2021</p>
+                    </div>
+                </div>
+                <div class=" tasks__elements ">
+                    <h2 class="tasks__header">In progress</h2>
+                    <button class="tasks__add">+</button>
+                    <div class="tasks tasks__in-progress">
+
+                    </div>
+                </div>
+                <div class=" tasks__elements">
+                    <h2 class="tasks__header">Completed</h2>
+                    <button class="tasks__add">+</button>
+                    <div class="tasks__completed">
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

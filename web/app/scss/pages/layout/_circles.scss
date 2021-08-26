@@ -1,0 +1,218 @@
+.login-page {
+    &__circle1 {
+        @include circle(30rem, -1);
+        top: 10rem;
+        left: -20rem;
+    }
+    &__circle2 {
+        @include circle(20rem, -1);
+        top: 5rem;
+        right: -10rem;
+    }
+    &__circle3 {
+        @include circle(40rem, -1);
+        top: -10rem;
+        right: 1rem;
+    }
+    &__circle--animated1 {
+        @include circle(7rem, -2);
+        top: 10%;
+        right: 5%;
+        animation-name: circle-animation1;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+    &__circle--animated2 {
+        @include circle(7rem, -2);
+        bottom: 20%;
+        right: 20%;
+        animation-name: circle-animation2;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+    }
+    &__circle--animated3 {
+        @include circle(10rem, -2);
+        top: 20%;
+        right: 5%;
+        animation-name: circle-animation3;
+        animation-duration: 20s;
+        animation-iteration-count: infinite
+    }
+    &__circle--animated4 {
+        @include circle(10rem, -2);
+        top: 5%;
+        right: 45%;
+        animation-name: circle-animation4;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+    }
+    &__circle--animated5 {
+        @include circle(7rem, -2);
+        top: 5%;
+        left: 30%;
+        animation-name: circle-animation5;
+        animation-duration: 20s;
+        animation-iteration-count: infinite
+    }
+    &__circle--animated6 {
+        @include circle(10rem, -2);
+        bottom: 20%;
+        right: 40%;
+        animation-name: circle-animation6;
+        animation-duration: 20s;
+        animation-iteration-count: infinite
+    }
+    @keyframes circle-animation1 {
+        0% {
+            top: 10%;
+            right: 5%;
+        }
+        20% {
+            top: 20%;
+            right: 2%;
+        }
+        40% {
+            top: 30%;
+            right: 10%;
+        }
+        60% {
+            right: 7%;
+        }
+        80% {
+            right: 10%;
+            top: 60%;
+        }
+        100% {
+            right: 20%;
+            top: 20%;
+        }
+    }
+    @keyframes circle-animation2 {
+        0% {
+            bottom: 20%;
+            right: 20%;
+        }
+        20% {
+            bottom: 40%;
+            right: 25%;
+        }
+        40% {
+            bottom: 60%;
+            right: 30%;
+        }
+        60% {
+            bottom: 35%;
+            right: 20%;
+        }
+        80% {
+            right: 15%;
+            bottom: 25%;
+        }
+        100% {
+            bottom: 20%;
+            right: 20%;
+        }
+    }
+    @keyframes circle-animation3 {
+        0% {
+            bottom: 20%;
+            left: 10%;
+        }
+        20% {
+            bottom: 30%;
+            left: 20%;
+        }
+        40% {
+            bottom: 50%;
+        }
+        60% {
+            left: 10%;
+        }
+        80% {
+            left: 5%;
+            bottom: 10%;
+        }
+        100% {
+            bottom: 20%;
+            left: 10%;
+        }
+    }
+    @keyframes circle-animation4 {
+        0% {
+            top: 5%;
+            right: 45%;
+        }
+        20% {
+            top: 20%;
+            right: 25%;
+        }
+        40% {
+            top: 70%;
+            right: 20%;
+        }
+        60% {
+            top: 80%;
+            right: 30%;
+        }
+        80% {
+            top: 80%;
+            right: 20%;
+        }
+        100% {
+            top: 5%;
+            right: 45%;
+        }
+    }
+    @keyframes circle-animation5 {
+        0% {
+            top: 20%;
+            left: 40%;
+        }
+        20% {
+            top: 10%;
+            left: 25%;
+        }
+        40% {
+            top: 70%;
+            left: 30%;
+        }
+        60% {
+            top: 80%;
+            left: 25%;
+        }
+        80% {
+            left: 15%;
+            top: 60%;
+        }
+        100% {
+            top: 20%;
+            left: 30%;
+        }
+    }
+    @keyframes circle-animation6 {
+        0% {
+            top: 5%;
+            left: 30%;
+        }
+        20% {
+            top: 10%;
+            left: 15%;
+        }
+        40% {
+            top: 30%;
+            left: 20%;
+        }
+        60% {
+            top: 45%;
+            left: 10%;
+        }
+        80% {
+            top: 25%;
+            left: 30%;
+        }
+        100% {
+            top: 5%;
+            left: 20%;
+        }
+    }
+}

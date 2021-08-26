@@ -1,0 +1,28 @@
+.tasks__to-do {
+    margin: 2rem 0;
+    position: relative;
+    background: map-get($categories-color, work);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    &__header {
+        font-size: 1.8rem;
+    }
+    &__info {
+        margin: 2rem 0;
+        font-size: 1.4rem;
+    }
+    &__deadline {
+        font-size: 1.8rem;
+    }
+    &__delete {
+        position: absolute;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        right: 2rem;
+        top: 1rem;
+    }
+}
