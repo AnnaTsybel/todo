@@ -1,4 +1,4 @@
-/*export default function seePassword() {
+export default function seePassword() {
     let passwordControl = document.querySelector('.password_control');
     let passwordInput = document.getElementById('password');
     passwordControl.addEventListener("click", () => {
@@ -10,4 +10,4 @@
             passwordInput.setAttribute('type', 'password');
         }
     })
-}*/
+}

@@ -32,31 +32,30 @@ function browsersync() {
 
 function scripts() {
     return src([
-            'app/js/index.js',
-            'app/js/app.js'
+            'app/app.js'
 
         ])
         .pipe(concat('app.min.js'))
         .pipe(uglify())
-        .pipe(dest('app/js/'))
+        .pipe(dest('app/'))
         .pipe(browserSync.stream())
 }
 
 function styles() {
-    return src('app/scss/main.scss')
+    return src('app/src/scss/main.scss')
         .pipe(eval(preprocessor)())
         .pipe(concat('app.min.css'))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(cleancss({ level: { 1: { specialComments: 0 } } }))
-        .pipe(dest('app/css/'))
+        .pipe(dest('app/src/css/'))
         .pipe(browserSync.stream())
 }
 
 function images() {
-    return src('app/images/src/**/*')
-        .pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
+    return src('app/static/images/src/**/*')
+        .pipe(newer('app/static/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
         .pipe(imagemin()) // Сжимаем и оптимизируем изображеня
-        .pipe(dest('app/images/dest/')) // Выгружаем оптимизированные изображения в папку назначения
+        .pipe(dest('app/static/images/dest/')) // Выгружаем оптимизированные изображения в папку назначения
 }
 
 function cleanimg() {

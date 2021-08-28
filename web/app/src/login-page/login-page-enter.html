@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
-    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="src/css/app.min.css">
 </head>
 
 <body>
@@ -14,21 +14,18 @@
         <div class="login-page__content">
             <h1 class="login-page__header">TODO project</h1>
             <div class="login-page__types">
-                <p class="login-page__type active-form">Registration</p>
-                <p class="login-page__type ">entrance</p>
+                <p class="login-page__type ">Registration</p>
+                <p class="login-page__type active-form">entrance</p>
             </div>
             <form action="#" class="login-page__form">
-                <input type="text" placeholder="Login" required>
+                <input type="text" required>
                 <div class=" password-input">
-                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="password" required>
                     <a href="#" class="password_control"></a>
                 </div>
-                <input type="text" placeholder="Name" required>
-                <input type="text" placeholder="Surname" required>
-                <input type="text" placeholder="Email" required>
-                <button type="submit">Register</button>
+                <button type="submit">Login</button>
             </form>
-            <a href="#" class="login-page__help">Already on account <span> login</span></a>
+            <a href="#" class="login-page__help">Don't have on account <span>signup</span></a>
             <div class="login-page__circle1"></div>
             <div class="login-page__circle2"></div>
             <div class="login-page__circle3"></div>
@@ -41,7 +38,7 @@
         <div class="login-page__circle--animated6"></div>
 
     </main>
-    <script src="js/app.min.js"></script>
+    <script type="module" src="app.min.js"></script>
 </body>
 
 </html>
