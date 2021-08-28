@@ -1,0 +1,39 @@
+.section-info {
+    margin-bottom: 3rem;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    background: var(--theme-color);
+    color: var(--text-color);
+    &__header {
+        font-size: 3rem;
+    }
+    &__sort {
+        border: none;
+        outline: none;
+    }
+    &__button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 1rem 3rem;
+        background: var(--gradient-bg);
+        border-radius: 1rem;
+        font-size: 1.8rem;
+    }
+    &__type {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.8rem;
+        &:nth-child(1) {
+            color: var(--form-main-color);
+        }
+        li {
+            cursor: pointer;
+            margin: 0 1rem;
+        }
+    }
+}

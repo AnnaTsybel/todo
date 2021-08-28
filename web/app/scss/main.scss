@@ -1,22 +1,30 @@
-/* components*/
-
-@import "components/variables";
-@import "components/mixins";
-
-/* typography*/
-
-@import "typography/typography";
-
-/*default-styles*/
-
-@import "aside/aside-menu";
-@import "calendar/calendar";
-@import "default/default";
-@import "header";
-@import "_section-increase-productivity";
-@import "section-info";
-@import "select-style";
-@import "tasks-section";
-@import "tasks-to-do";
-@import "circles";
-@import "entering-page";
+//utils
+@import "utils/variables";
+@import "utils/default";
+@import "utils/mixins";
+@import "utils/typography";
+@import "utils/themes";
+@import "utils/scroll";
+//pages
+//calendar
+@import "pages/calendar/calendar";
+//components
+@import "pages/components/section-info";
+@import "pages/components/select-style";
+@import "pages/components/modal";
+@import "pages/components/_radio-buttons";
+//layout
+@import "pages/layout/aside/aside-menu";
+@import "pages/layout/header/header";
+@import "pages/layout/header/components/button-theme";
+@import "pages/layout/main/section-increase-productivity";
+//login
+@import "pages/login/login-page";
+@import "pages/login/components/circles";
+@import "pages/login/components/form-login.scss";
+//tasks
+@import "pages/tasks/tasks-section";
+@import "pages/tasks/tasks-to-do";
+@import "pages/tasks/components/modal-form";
+//settings 
+@import "pages/settings/settings";

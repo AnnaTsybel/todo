@@ -1,0 +1,28 @@
+:root {
+    --theme-color: rgb(255, 255, 255);
+    --header-bg: rgb(233, 233, 233);
+    --text-color: #000;
+    --gradient-bg: linear-gradient(94deg, rgba(237, 193, 210, 0.9948354341736695) 37%, rgba(149, 190, 235, 1) 88%);
+    --aside-bg: rgb(255, 255, 255);
+    --active-aside-element-color: #C169D3;
+    --form-main-color: #A6A3D9;
+    --button-color: rgb(165, 165, 165);
+    --tasks-blocks-bg: rgb(238, 238, 238);
+    --tasks-add-bg: rgb(226, 226, 226);
+    --photo-user-bg: #8583a8;
+    --textarea-bg: rgb(235, 235, 235);
+}
+
+.dark {
+    --theme-color: black;
+    --header-bg: rgb(32, 32, 32);
+    --text-color: #fff;
+    --gradient-bg: linear-gradient(94deg, rgba(165, 19, 75, 0.995) 37%, rgb(8, 42, 78) 88%);
+    --aside-bg: rgb(20, 20, 20);
+    --active-aside-element-color: #4f1d58;
+    --form-main-color: #4a4874;
+    --button-color: rgb(77, 77, 77);
+    --tasks-blocks-bg: rgb(34, 34, 34);
+    --tasks-add-bg: rgb(32, 32, 32);
+    --textarea-bg: rgb(22, 22, 22);
+}

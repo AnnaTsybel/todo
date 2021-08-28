@@ -1,0 +1,57 @@
+@each $categorie,
+$color in $categories-color {
+    .radio-#{$categorie} {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &+label {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: #757575;
+            text-transform: capitalize;
+            &::before {
+                margin: 0 0.5rem;
+                content: '';
+                display: inline-block;
+                width: 1.35rem;
+                height: 1.35rem;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border-radius: 50%;
+                background: $color;
+            }
+        }
+        &:not(:disabled):not(:checked)+label:hover::before {
+            background: darken($color, 30%);
+        }
+        &:not(:disabled):active+label::before {
+            background: #b3d7ff;
+        }
+        &:focus:not(:checked)+label::before {
+            border-color: #80bdff;
+        }
+        &:checked+label::before {
+            background: $color;
+        }
+        &:checked+label::after {
+            top: 0.4rem;
+            left: 0.95rem;
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border-radius: 50%;
+            background: darken($color, 40%);
+        }
+        &:disabled+label::before {
+            background: #e9ecef;
+        }
+    }
+}

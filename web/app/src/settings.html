@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <aside class="aside">
+            <div id="aside" class="menu-user">
+                <div class="menu-user__photo-user">
+                    <img src="images/dest/no_avatar.png">
+                </div>
+                <div class="menu-user__menu">
+
+
+                    <ul class="menu-user__stats">
+                        <li>
+                            <a href="#"><img src="images/dest/icons/home.png" alt="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/dest/icons/bar-chart.png" alt="stats">Stats</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/dest/icons/home.png" alt="projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/dest/icons/calendar.png" alt="calendar">Calendar</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-user__stats">
+                        <li>
+                            <a href="#" class="active"><img src="images/dest/icons/settings.png" alt="settings">Settings </a>
+                        </li>
+                        <li>
+                            <a href="#" id="logout"><img src="images/dest/icons/export.png" alt="log out">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <main class="main-info">
+            <header class="header">
+                <div class="header__search">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header__info">
+                    <a class="header__help" href="#"><img src="images/dest/icons/help.png" alt="help"></a>
+                    <a class="header__notification " href="#"><img src="images/dest/icons/notification.png" alt="notification"></a>
+                    <a class="header__profile-change" href="#">Name Surname</a>
+                </div>
+                <div class="header__change-theme">
+                    <input type="radio" name="themes" value="light" id="light">
+                    <label for="dark" class="themes light"></label>
+                    <div class="header__button-background">
+
+                    </div>
+                    <input type="radio" name="themes" value="dark" id="dark">
+                    <label for="light" class=" themes dark"></label>
+
+                </div>
+
+            </header>
+            <div class="main-info__content">
+                <div class="section-info">
+                    <h1 class="section-info__header">Settings</h1>
+                    <ul class="section-info__type">
+                        <li>Profile</li>
+                        <li>Tasks</li>
+                    </ul>
+                </div>
+                <div class="section-settings">
+                    <h2 class="section-settings__header">Profile</h2>
+                    <form action="#" class="section-settings__form">
+                        <label for="add-photo" class="add-photo"><img src="images/dest/no_avatar.png" alt="avatar" ></label>
+                        <input type="file" id="add-photo">
+                        <input type="text" placeholder="Login">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Surname">
+                        <input type="text" placeholder="Password">
+                        <input type="text" placeholder="Repeat password">
+                        <button>Change</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+    <div id="modal " class="modal">
+        <div class="modal-logout">
+            <h1 class="modal__header">Do you realy want to logout?</h1>
+            <div class="modal__buttons">
+                <button class="modal__button">Yes</button>
+                <button class="modal__button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="js/app.min.js"></script>
+</body>
+
+</html>

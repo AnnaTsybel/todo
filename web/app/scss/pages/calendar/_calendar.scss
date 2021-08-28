@@ -1,11 +1,12 @@
 table {
-    background: white;
+    background: var(--theme-color);
     table-layout: fixed;
     margin: 4rem 3rem;
     width: 96%;
     border-collapse: collapse;
     font-size: 1.8rem;
     border-radius: 1rem;
+    color: var(--text-color)
 }
 
 thead th {

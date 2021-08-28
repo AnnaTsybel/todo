@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-info {
+    min-height: 100vh;
+    width: 80%;
+    background: var(--gradient-bg);
+}
+
+.main-info__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}

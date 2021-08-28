@@ -1,0 +1,70 @@
+.modal__form {
+    &__element {
+        position: relative;
+        margin: 2rem 0;
+        label {
+            font-size: 1.6rem;
+        }
+        input {
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            border: none;
+            outline: none;
+            background: none;
+            color: var(--text-color);
+            &[type="radio"] {
+                margin: 1rem 0;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.1rem;
+            background: var(--text-color);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__categories {
+        display: flex;
+        flex-direction: row;
+        label {
+            font-size: 1.2rem;
+        }
+    }
+    &__textarea {
+        margin: 2rem 0;
+        textarea {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 1.4rem;
+            min-height: 10rem;
+            outline: none;
+            resize: none;
+            background: var( --textarea-bg);
+            color: var(--text-color);
+            border: none;
+            &::-webkit-scrollbar {
+                width: 0.5em;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                border-radius: 0.4rem;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        label {
+            color: var(--text-color);
+            font-size: 1.6rem;
+        }
+    }
+}

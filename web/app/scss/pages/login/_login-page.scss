@@ -1,0 +1,45 @@
+.login-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    &__content {
+        position: relative;
+        width: 40rem;
+        margin: 0 auto;
+        padding: 3rem 4rem;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0px 1px 10px 16px rgba(34, 60, 80, 0.29);
+        background: var(--theme-color);
+    }
+    &__header {
+        margin: 3rem auto;
+        font-size: 4rem;
+    }
+    &__types {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__type {
+        padding: 1rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    .active-form {
+        border-radius: 1rem;
+        background: var(--form-main-color);
+    }
+    &__help {
+        margin: 1rem;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: var(--text-color);
+        span {
+            text-transform: uppercase;
+            color: var(--form-main-color);
+        }
+    }
+}
