@@ -14,31 +14,31 @@
         <aside class="aside">
             <div id="aside" class="menu-user">
                 <div class="menu-user__photo-user">
-                    <img src="images/dest/no_avatar.png">
+                    <img src="static/images/dest/no_avatar.png">
                 </div>
                 <div class="menu-user__menu">
 
 
                     <ul class="menu-user__stats">
                         <li>
-                            <a href="#"><img src="images/dest/icons/home.png" alt="home">Home</a>
+                            <a href="#"><img src="static/images/dest/icons/home.png" alt="home">Home</a>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dest/icons/bar-chart.png" alt="stats">Stats</a>
+                            <a href="#"><img src="static/images/dest/icons/bar-chart.png" alt="stats">Stats</a>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dest/icons/home.png" alt="projects">Projects</a>
+                            <a href="#"><img src="static/images/dest/icons/home.png" alt="projects">Projects</a>
                         </li>
                         <li>
-                            <a href="#"><img src="images/dest/icons/calendar.png" alt="calendar">Calendar</a>
+                            <a href="#"><img src="static/images/dest/icons/calendar.png" alt="calendar">Calendar</a>
                         </li>
                     </ul>
                     <ul class="menu-user__stats">
                         <li>
-                            <a href="#" class="active"><img src="images/dest/icons/settings.png" alt="settings">Settings </a>
+                            <a href="#" class="active"><img src="static/images/dest/icons/settings.png" alt="settings">Settings </a>
                         </li>
                         <li>
-                            <a href="#" id="logout"><img src="images/dest/icons/export.png" alt="log out">Log out</a>
+                            <a href="#" id="logout"><img src="static/images/dest/icons/export.png" alt="log out">Log out</a>
                         </li>
                     </ul>
                 </div>
@@ -50,8 +50,8 @@
                     <input type="text" placeholder="Search">
                 </div>
                 <div class="header__info">
-                    <a class="header__help" href="#"><img src="images/dest/icons/help.png" alt="help"></a>
-                    <a class="header__notification " href="#"><img src="images/dest/icons/notification.png" alt="notification"></a>
+                    <a class="header__help" href="#"><img src="static/images/dest/icons/help.png" alt="help"></a>
+                    <a class="header__notification " href="#"><img src="static/images/dest/icons/notification.png" alt="notification"></a>
                     <a class="header__profile-change" href="#">Name Surname</a>
                 </div>
                 <div class="header__change-theme">
@@ -67,32 +67,49 @@
 
             </header>
             <div class="main-info__content">
-                <div class="section-info">
-                    <h1 class="section-info__header">Settings</h1>
+                <section class="section section-info">
+                    <h1 class="section-info__tittle">Settings</h1>
                     <ul class="section-info__type">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Tasks</a></li>
+                        <li class="active-settings">Profile</li>
+                        <li>Tasks</li>
                     </ul>
-                </div>
-                <div class="section-settings">
-                    <h2 class="section-settings__header">Profile</h2>
+                </section>
+                <section class="section section-settings">
+                    <h2 class="section-settings__tittle">Profile</h2>
                     <form action="#" class="section-settings__form">
-                        <label for="add-photo" class="add-photo"><img src="images/dest/no_avatar.png" alt="avatar" ></label>
-                        <input type="file" id="add-photo">
-                        <input type="text" placeholder="Login">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Surname">
-                        <input type="text" placeholder="Password">
-                        <input type="text" placeholder="Repeat password">
-                        <button>Change</button>
+                        <div class="section-settings__form__element">
+                            <label for="add-photo" class="add-photo"><img src="static/images/dest/no_avatar.png" alt="avatar" ></label>
+                            <input type="file" id="add-photo">
+                        </div>
+                        <div class="section-settings__form__element">
+                            <label for="settings-login">Login</label>
+                            <input type="text" placeholder="Enter changed login" id="settings-login">
+                        </div>
+                        <div class="section-settings__form__element">
+                            <label for="settings-name">Name</label>
+                            <input type="text" placeholder="Enter changed name" id="settings-name">
+                        </div>
+                        <div class="section-settings__form__element">
+                            <label for="settings-surname">Surname</label>
+                            <input type="text" placeholder="Enter changed surname" id="settings-surname">
+                        </div>
+                        <div class="section-settings__form__element">
+                            <label for="settings-password">Password</label>
+                            <input type="text" placeholder="Enter changed password" id="settings-password">
+                        </div>
+                        <div class="section-settings__form__element">
+                            <label for="settings-repeat-password">Repeat password</label>
+                            <input type="text" placeholder="Repeat changed password" id="settings-repeat-password">
+                        </div>
+                        <button class="button-form" type="submit">Change</button>
                     </form>
-                </div>
+                </section>
             </div>
 
 
         </main>
     </div>
-    <div id="modal " class="modal">
+    <!-- <div id="modal " class="modal">
         <div class="modal-logout">
             <h1 class="modal__header">Do you realy want to logout?</h1>
             <div class="modal__buttons">
@@ -101,7 +118,7 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
     <script type="module" src="app.min.js"></script>
 </body>

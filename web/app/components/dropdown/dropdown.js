@@ -11,9 +11,9 @@ export default function select() {
             this.parentElement.classList.toggle('show');
             //switching arrows icons
             if (this.parentElement.classList.contains('show')) {
-                selectIcon.setAttribute('src', 'images/dest/icons/arrow-up.png');
+                selectIcon.setAttribute('src', 'static/images/dest/icons/arrow-up.png');
             } else {
-                selectIcon.setAttribute('src', 'images/dest/icons/arrow-down.png');
+                selectIcon.setAttribute('src', 'static/images/dest/icons/arrow-down.png');
             }
 
         })
@@ -34,7 +34,7 @@ export default function select() {
             //set id to new current element
             currentText.setAttribute('id', `${currentId}`);
             //change icon to arrow down if current element changes
-            selectIcon.setAttribute('src', 'images/dest/icons/arrow-down.png');
+            selectIcon.setAttribute('src', 'static/images/dest/icons/arrow-down.png');
             //close dropdown 
             select.classList.remove('show');
         })

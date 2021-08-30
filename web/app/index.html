@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO</title>
+    <title>Document</title>
     <link rel="stylesheet" href="src/css/app.min.css">
 </head>
 
@@ -16,32 +16,28 @@
                 <div class="menu-user__photo-user">
                     <img src="static/images/dest/no_avatar.png">
                 </div>
-                <div class="menu-user__menu">
-
-
-                    <ul class="menu-user__stats">
-                        <li>
-                            <a href="#"><img src="static/images/dest/icons/home.png" alt="home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="static/images/dest/icons/bar-chart.png" alt="stats">Stats</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="static/images/dest/icons/home.png" alt="projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="static/images/dest/icons/calendar.png" alt="calendar">Calendar</a>
-                        </li>
-                    </ul>
-                    <ul class="menu-user__stats">
-                        <li>
-                            <a href="#" class="active"><img src="static/images/dest/icons/settings.png" alt="settings">Settings </a>
-                        </li>
-                        <li>
-                            <a href="#" id="logout"><img src="static/images/dest/icons/export.png" alt="log out">Log out</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><img src="static/images/dest/icons/home.png" alt="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="static/images/dest/icons/bar-chart.png" alt="stats">Stats</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active"><img src="static/images/dest/icons/home.png" alt="projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="static/images/dest/icons/calendar.png" alt="calendar">Calendar</a>
+                    </li>
+                </ul>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><img src="static/images/dest/icons/settings.png" alt="settings">Settings </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="static/images/dest/icons/export.png" alt="log out">Log out</a>
+                    </li>
+                </ul>
             </div>
         </aside>
         <main class="main-info">
@@ -55,7 +51,7 @@
                     <a class="header__profile-change" href="#">Name Surname</a>
                 </div>
                 <div class="header__change-theme">
-                    <input type="radio" name="themes" value="light" id="light">
+                    <input type="radio" name="themes" value="light" id="light" checked>
                     <label for="dark" class="themes light"></label>
                     <div class="header__button-background">
 
@@ -68,58 +64,134 @@
             </header>
             <div class="main-info__content">
                 <section class="section section-info">
-                    <h1 class="section-info__tittle">Settings</h1>
-                    <ul class="section-info__type">
-                        <li class="active-settings">Profile</li>
-                        <li>Tasks</li>
-                    </ul>
+                    <h1 class="section-info__tittle">Projects</h1>
+                    <div class="select">
+                        <div class="select__header">
+                            <span id="week" class="select__current">This week</span>
+                            <img class="select__icon" src="static/images/dest/icons/arrow-down.png" alt="arrow-down">
+                        </div>
+                        <div class="select__body">
+                            <div id="day" class="select__item">This day</div>
+                            <div id="week" class="select__item">This week</div>
+                            <div id="month" class="select__item">This month</div>
+                        </div>
+                    </div>
                 </section>
-                <section class="section section-settings">
-                    <h2 class="section-settings__tittle">Profile</h2>
-                    <form action="#" class="section-settings__form">
-                        <div class="section-settings__form__element">
-                            <label for="add-photo" class="add-photo"><img src="static/images/dest/no_avatar.png" alt="avatar" ></label>
-                            <input type="file" id="add-photo">
+                <section class="tasks">
+                    <button class="tasks__add">Add task +</button>
+                    <div class="tasks__content">
+
+
+                        <div class="tasks__elements">
+                            <h2 class="tasks__header">To do</h2>
+                            <div class="task-work">
+                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
+                                <h3 class=" task__tittle">Lorem ipsum</h3>
+                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
+                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
+                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                                <p class=" task__deadline">11.04.2021</p>
+                            </div>
+                            <div class="task-education">
+                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
+                                <h3 class=" task__tittle">Lorem ipsum</h3>
+                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
+                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
+                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                                <p class=" tasks__to-do__deadline">11.04.2021</p>
+                            </div>
+                            <div class=" task-other">
+                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
+                                <h3 class="  task__tittle">Lorem ipsum</h3>
+                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
+                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
+                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                                <p class=" task__deadline">11.04.2021</p>
+                            </div>
                         </div>
-                        <div class="section-settings__form__element">
-                            <label for="settings-login">Login</label>
-                            <input type="text" placeholder="Enter changed login" id="settings-login">
+                        <div class=" tasks__elements ">
+                            <h2 class="tasks__header">In progress</h2>
+                            <div class="task-in-progress-work">
+                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
+                                <h3 class=" task__tittle">Lorem ipsum</h3>
+                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
+                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
+                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                                <p class=" task__deadline">11.04.2021</p>
+                            </div>
                         </div>
-                        <div class="section-settings__form__element">
-                            <label for="settings-name">Name</label>
-                            <input type="text" placeholder="Enter changed name" id="settings-name">
+                        <div class=" tasks__elements">
+                            <h2 class="tasks__header">Completed</h2>
+                            <div class="task-completed-work">
+                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
+                                <h3 class=" task__tittle">Lorem ipsum</h3>
+                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
+                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
+                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
+                                <p class=" task__deadline">11.04.2021</p>
+                            </div>
                         </div>
-                        <div class="section-settings__form__element">
-                            <label for="settings-surname">Surname</label>
-                            <input type="text" placeholder="Enter changed surname" id="settings-surname">
-                        </div>
-                        <div class="section-settings__form__element">
-                            <label for="settings-password">Password</label>
-                            <input type="text" placeholder="Enter changed password" id="settings-password">
-                        </div>
-                        <div class="section-settings__form__element">
-                            <label for="settings-repeat-password">Repeat password</label>
-                            <input type="text" placeholder="Repeat changed password" id="settings-repeat-password">
-                        </div>
-                        <button class="button-form" type="submit">Change</button>
-                    </form>
+                    </div>
                 </section>
             </div>
-
-
         </main>
+
     </div>
-    <!-- <div id="modal " class="modal">
+    <!-- Modal task-add-->
+    <!--<div id="modal " class="modal">
         <div class="modal-logout">
-            <h1 class="modal__header">Do you realy want to logout?</h1>
-            <div class="modal__buttons">
-                <button class="modal__button">Yes</button>
-                <button class="modal__button">Cancel</button>
-            </div>
+            <h2 class="modal__header">Add task</h2>
+            <form action="#" class="modal__form">
+                <div class="modal__form__element">
+                    <label for="title">
+                        Title
+                    </label>
+                    <input id="title" type="text" placeholder="Title">
+                </div>
+
+                <div class="modal__form__element">
+                    <label for="title">
+                        Categories
+                    </label>
+                    <div class="modal__form__categories">
+
+                        <input type="radio" name="categories" value="hobby" id="hobby" class="radio-hobby">
+                        <label for="hobby">Hobby</label>
+
+                        <input type="radio" name="categories" value="sport" id="sport" class="radio-sport">
+                        <label for="sport">sport</label>
+
+                        <input type="radio" name="categories" value="education" id="education" class="radio-education">
+                        <label for="education"> education</label>
+
+                        <input type="radio" name="categories" value="other" id="other" class="radio-other">
+                        <label for="other">other</label>
+
+                        <input type="radio" name="categories" value="work" id="work" class="radio-work">
+                        <label for="work">work</label>
+                    </div>
+                </div>
+                <div class="modal__form__element">
+                    <label for="title">
+                        Deadline
+                    </label>
+                    <input type="date">
+                </div>
+                <div class="modal__form__textarea">
+                    <label for="title">
+                       To do
+                    </label>
+                    <textarea></textarea>
+                </div>
+                <div class="modal__buttons">
+                    <button type="submit" class="modal__button">Ok</button>
+                    <button type="button" class="modal__button">Cancel</button>
+                </div>
+
+            </form>
 
         </div>
     </div>-->
-
     <script type="module" src="app.min.js"></script>
 </body>
 
