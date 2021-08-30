@@ -1,0 +1,37 @@
+.section-settings {
+    &__form {
+        margin: 3rem 0;
+        &__element {
+            margin: 1.25rem auto;
+            width: 60%;
+        }
+        label {
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+        input {
+            width: 100%;
+            display: block;
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 1px solid var(--text-color);
+            outline: none;
+            background: none;
+            color: var(--text-color);
+        }
+        #add-photo {
+            display: none;
+        }
+        .add-photo {
+            cursor: pointer;
+            img {
+                display: block;
+                margin: 0.5rem auto;
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}

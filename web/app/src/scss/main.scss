@@ -9,10 +9,12 @@
 //calendar
 @import "pages/calendar/calendar";
 //components
+@import "pages/components/section-style";
 @import "pages/components/section-info";
 @import "pages/components/select-style";
 @import "pages/components/modal";
-@import "pages/components/_radio-buttons";
+@import "pages/components/buttons";
+@import "pages/components/radio-buttons";
 //layout
 @import "pages/layout/aside/aside-menu";
 @import "pages/layout/header/header";
@@ -27,4 +29,5 @@
 @import "pages/tasks/tasks-to-do";
 @import "pages/tasks/components/modal-form";
 //settings 
+@import "pages/settings/components/settings-form";
 @import "pages/settings/settings";
