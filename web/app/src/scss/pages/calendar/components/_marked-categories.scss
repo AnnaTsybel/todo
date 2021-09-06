@@ -1,0 +1,13 @@
+@each $categorie,
+$color in $categories-color {
+    .marked-#{$categorie} {
+        position: absolute;
+        content: '';
+        top: 1rem;
+        right: 1rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: $color;
+    }
+}

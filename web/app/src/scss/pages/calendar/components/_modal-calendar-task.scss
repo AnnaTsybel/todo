@@ -1,0 +1,18 @@
+.modal__calendar__task {
+    background: var(--theme-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 40rem;
+    &__tittle {
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__description {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    &__deadline {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}

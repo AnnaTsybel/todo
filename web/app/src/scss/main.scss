@@ -7,6 +7,9 @@
 @import "utils/scroll";
 //pages
 //calendar
+@import "pages/calendar/components/current-day";
+@import "pages/calendar/components/marked-categories";
+@import "pages/calendar/components/modal-calendar-task";
 @import "pages/calendar/calendar";
 //components
 @import "pages/components/section-style";

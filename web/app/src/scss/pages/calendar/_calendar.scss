@@ -1,18 +1,45 @@
+.calendar-fill {
+    margin: 3rem 0
+}
+
 table {
     background: var(--theme-color);
     table-layout: fixed;
-    margin: 4rem 3rem;
-    width: 96%;
+    width: 100%;
     border-collapse: collapse;
+    border-style: hidden;
     font-size: 1.8rem;
     border-radius: 1rem;
-    color: var(--text-color)
-}
-
-thead th {
-    padding: 1rem;
-}
-
-tbody td {
-    text-align: center;
+    color: var(--text-color);
+    th,
+    td {
+        padding: 3rem;
+        /* Поля вокруг содержимого таблицы */
+        /* Параметры рамки */
+        text-align: center;
+    }
+    th {
+        padding: 3rem;
+        font-size: 2.5rem;
+        border: 1px solid var(--table-thead-border);
+        background: var(--table-thead-bg);
+        &:nth-child(1) {
+            border-radius: 1rem 0 0 0;
+        }
+        &:last-child {
+            border-radius: 0 1rem 0 0;
+        }
+        z-index: 1;
+    }
+    td {
+        position: relative;
+        padding: 4rem 3rem 2rem 3rem;
+        font-size: 2rem;
+        cursor: pointer;
+        border: 1px solid var(--text-color);
+        span {
+            z-index: 20;
+        }
+        z-index: 1;
+    }
 }

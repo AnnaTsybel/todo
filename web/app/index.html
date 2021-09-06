@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/css/app.min.css">
+    <script type="module" src="app.min.js"></script>
 </head>
 
 <body>
@@ -62,137 +63,11 @@
                 </div>
 
             </header>
-            <div class="main-info__content">
-                <section class="section section-info">
-                    <h1 class="section-info__tittle">Projects</h1>
-                    <div class="select">
-                        <div class="select__header">
-                            <span id="week" class="select__current">This week</span>
-                            <img class="select__icon" src="static/images/dest/icons/arrow-down.png" alt="arrow-down">
-                        </div>
-                        <div class="select__body">
-                            <div id="day" class="select__item">This day</div>
-                            <div id="week" class="select__item">This week</div>
-                            <div id="month" class="select__item">This month</div>
-                        </div>
-                    </div>
-                </section>
-                <section class="tasks">
-                    <button class="tasks__add">Add task +</button>
-                    <div class="tasks__content">
 
-
-                        <div class="tasks__elements">
-                            <h2 class="tasks__header">To do</h2>
-                            <div class="task-work">
-                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
-                                <h3 class=" task__tittle">Lorem ipsum</h3>
-                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
-                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
-                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
-                                <p class=" task__deadline">11.04.2021</p>
-                            </div>
-                            <div class="task-education">
-                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
-                                <h3 class=" task__tittle">Lorem ipsum</h3>
-                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
-                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
-                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
-                                <p class=" tasks__to-do__deadline">11.04.2021</p>
-                            </div>
-                            <div class=" task-other">
-                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
-                                <h3 class="  task__tittle">Lorem ipsum</h3>
-                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
-                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
-                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
-                                <p class=" task__deadline">11.04.2021</p>
-                            </div>
-                        </div>
-                        <div class=" tasks__elements ">
-                            <h2 class="tasks__header">In progress</h2>
-                            <div class="task-in-progress-work">
-                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
-                                <h3 class=" task__tittle">Lorem ipsum</h3>
-                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
-                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
-                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
-                                <p class=" task__deadline">11.04.2021</p>
-                            </div>
-                        </div>
-                        <div class=" tasks__elements">
-                            <h2 class="tasks__header">Completed</h2>
-                            <div class="task-completed-work">
-                                <button class=" task__button-delete"><img src="static/images/dest/icons/delete.png" alt="delete"></button>
-                                <h3 class=" task__tittle">Lorem ipsum</h3>
-                                <p class=" task__description">Mauris et libero nec neque tempor vestibulum molestie quis eros. Cras dolor dolor, lacinia non nisi ac, vulputate lacinia eros. Duis ligula nibh, imperdiet ac elit a, aliquam tristique arcu. Nam ullamcorper varius elit,
-                                    in consequat eros ullamcorper ac. Mauris pharetra lectus feugiat condimentum facilisis. Vestibulum vel dui a nibh malesuada volutpat. Proin non leo nisl. Phasellus pellentesque, enim eu malesuada pulvinar, nibh nunc
-                                    eleifend eros, a malesuada mi elit ut est. Quisque et varius arcu. Nam id diam scelerisque, feugiat risus eu, ornare tortor. Praesent ac ultrices nulla.</p>
-                                <p class=" task__deadline">11.04.2021</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
         </main>
 
     </div>
-    <!-- Modal task-add-->
-    <!--<div id="modal " class="modal">
-        <div class="modal-logout">
-            <h2 class="modal__header">Add task</h2>
-            <form action="#" class="modal__form">
-                <div class="modal__form__element">
-                    <label for="title">
-                        Title
-                    </label>
-                    <input id="title" type="text" placeholder="Title">
-                </div>
 
-                <div class="modal__form__element">
-                    <label for="title">
-                        Categories
-                    </label>
-                    <div class="modal__form__categories">
-
-                        <input type="radio" name="categories" value="hobby" id="hobby" class="radio-hobby">
-                        <label for="hobby">Hobby</label>
-
-                        <input type="radio" name="categories" value="sport" id="sport" class="radio-sport">
-                        <label for="sport">sport</label>
-
-                        <input type="radio" name="categories" value="education" id="education" class="radio-education">
-                        <label for="education"> education</label>
-
-                        <input type="radio" name="categories" value="other" id="other" class="radio-other">
-                        <label for="other">other</label>
-
-                        <input type="radio" name="categories" value="work" id="work" class="radio-work">
-                        <label for="work">work</label>
-                    </div>
-                </div>
-                <div class="modal__form__element">
-                    <label for="title">
-                        Deadline
-                    </label>
-                    <input type="date">
-                </div>
-                <div class="modal__form__textarea">
-                    <label for="title">
-                       To do
-                    </label>
-                    <textarea></textarea>
-                </div>
-                <div class="modal__buttons">
-                    <button type="submit" class="modal__button">Ok</button>
-                    <button type="button" class="modal__button">Cancel</button>
-                </div>
-
-            </form>
-
-        </div>
-    </div>-->
-    <script type="module" src="app.min.js"></script>
 </body>
 
 </html>
