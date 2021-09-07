@@ -2,12 +2,13 @@
     background: var(--theme-color);
     padding: 1rem;
     border-radius: 1rem;
-    width: 40rem;
+    color: var(--text-color);
     &__tittle {
         font-size: 2rem;
         text-align: center;
     }
     &__description {
+        margin: 2rem 0;
         font-size: 1.4rem;
         text-align: center;
     }

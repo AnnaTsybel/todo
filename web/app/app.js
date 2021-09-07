@@ -7,15 +7,15 @@ import calendarModel from './components/calendar/Model.js';
 import calendarView from './components/calendar/View.js';
 import calendarController from './components/calendar/Controller.js';
 
-window.onload = router();
+
 
 
 const drop = dropdown();
 
-
-const modelCalendar = new calendarModel();
+/*const modelCalendar = new calendarModel();
 const viewCalendar = new calendarView(modelCalendar);
 const controllerCalendar = new calendarController(modelCalendar, viewCalendar);
+*/
 
 const modals = modal();
 

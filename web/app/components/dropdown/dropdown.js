@@ -149,8 +149,32 @@ export default function select() {
         //call the function to display select years 
         displaySelect(years, selectYearId, currentSelect);
     };
+    const sortDisplay = function() {
+
+        //current select year
+
+        let currentSelect = {
+            name: 'All',
+            id: 'all'
+        };
+
+        //id of select year
+        const selectYearId = 'select-sort';
+
+        //array of years objects
+        const sort = [
+            { name: 'This week', id: 'this-week' },
+            { name: 'This day', id: 'this-day' },
+            { name: 'This month', id: 'this-month' },
+            { name: 'All', id: 'all' }
+        ];
+
+        //call the function to display select years 
+        displaySelect(sort, selectYearId, currentSelect);
+    };
 
     //inizialisation of selects
-    monthesDisplay();
-    yearsDisplay();
+    /*monthesDisplay();
+    yearsDisplay();*/
+    sortDisplay()
 }

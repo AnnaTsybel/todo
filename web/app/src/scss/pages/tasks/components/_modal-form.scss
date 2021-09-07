@@ -16,6 +16,15 @@
             &[type="radio"] {
                 margin: 1rem 0;
             }
+            &[type="text"]::placeholder {
+                background: none;
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                border: none;
+                box-shadow: 0 0 0px 1000px var(--theme-color) inset;
+            }
         }
         &:after {
             content: '';

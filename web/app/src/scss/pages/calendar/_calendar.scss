@@ -33,7 +33,6 @@ table {
     }
     td {
         position: relative;
-        padding: 4rem 3rem 2rem 3rem;
         font-size: 2rem;
         cursor: pointer;
         border: 1px solid var(--text-color);
@@ -42,4 +41,9 @@ table {
         }
         z-index: 1;
     }
+}
+
+.modal-calendar-link {
+    padding: 4rem 3rem 2rem 3rem;
+    color: var(--text-color)
 }

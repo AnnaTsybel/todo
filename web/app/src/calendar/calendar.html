@@ -38,7 +38,7 @@
                             <a href="#"><img src="../../static/images/dest/icons/settings.png" alt="settings">Settings </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../static/images/dest/icons/export.png" alt="log out">Log out</a>
+                            <a class="modal-link" href="#modal-logout"><img src="../../static/images/dest/icons/export.png" alt="log out">Log out</a>
                         </li>
                     </ul>
                 </div>
@@ -97,11 +97,32 @@
         </main>
     </div>
 
-    <section class="modal">
-        <div class="modal__calendar__task">
 
+    <section class="modal">
+        <div class="modal__body">
+            <div class="modal__content">
+                <div class="modal__calendar__task">
+
+                </div>
+            </div>
         </div>
     </section>
+
+    <div id="modal-logout" class="modal">
+        <div class="modal__body">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <a class="modal__button-close modal-close" href="#"><span>&#10006</span></a>
+                </div>
+                <h1 class="modal__header">Do you realy want to logout?</h1>
+                <div class="modal__buttons">
+                    <button class="modal__button">Yes</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
     <script type="module" src="../../app.min.js"></script>
 </body>
 
