@@ -6,6 +6,9 @@ import router from './components/router/router.js';
 import calendarModel from './components/calendar/Model.js';
 import calendarView from './components/calendar/View.js';
 import calendarController from './components/calendar/Controller.js';
+import taskModel from './components/tasks/Model.js';
+import taskView from './components/tasks/View.js';
+import taskController from './components/tasks/Controller.js';
 
 
 
@@ -16,6 +19,10 @@ const drop = dropdown();
 const viewCalendar = new calendarView(modelCalendar);
 const controllerCalendar = new calendarController(modelCalendar, viewCalendar);
 */
+const modelTask = new taskModel();
+const viewTask = new taskView(modelTask);
+const controllerTask = new taskController(modelTask, viewTask);
+
 
 const modals = modal();
 

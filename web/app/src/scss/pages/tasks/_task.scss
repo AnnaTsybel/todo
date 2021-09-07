@@ -2,6 +2,10 @@
     .task {
         &__tittle {
             font-size: 1.8rem;
+            text-transform: capitalize;
+            &.overdue {
+                color: var(--overdue-task-color)
+            }
         }
         &__description {
             margin: 2rem 0;
