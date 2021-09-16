@@ -1,11 +1,8 @@
-@mixin task() {
+@mixin task($color) {
     .task {
         &__tittle {
             font-size: 1.8rem;
             text-transform: capitalize;
-            &.overdue {
-                color: var(--overdue-task-color)
-            }
         }
         &__description {
             margin: 2rem 0;
@@ -14,16 +11,33 @@
         &__deadline {
             font-size: 1.8rem;
         }
+        &__buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin: 1rem 0;
+        }
         &__button-delete {
-            position: absolute;
-            border: none;
-            outline: none;
-            background: none;
             cursor: pointer;
-            width: 2.5rem;
-            height: 2.5rem;
-            right: 2rem;
-            top: 1rem;
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+        &__button-edit {
+            margin: 0 1.5rem 0 0;
+            cursor: pointer;
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+        &__button-move {
+            position: absolute;
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            top: 2rem;
+            right: 50%;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: darken($color, 30%);
         }
     }
 }
@@ -31,30 +45,67 @@
 @each $categorie,
 $color in $categories-color {
     .task-#{$categorie} {
-        cursor: pointer;
+        cursor: default;
         position: relative;
         margin: 3rem 0;
         background: $color;
         padding: 2rem 3rem;
         border-radius: 1rem;
-        @include task();
+        &.overdue {
+            .task {
+                &__tittle {
+                    color: var(--overdue-task-color)
+                }
+            }
+        }
+        &.move {
+            position: absolute;
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 700px;
+        }
+        @include task($color);
     }
     .task-in-progress-#{$categorie} {
-        cursor: pointer;
         position: relative;
         margin: 3rem 0;
         background: $color;
         padding: 2rem 3rem;
         border-radius: 1rem;
-        @include task();
+        @include task($color);
+        &.overdue {
+            .task {
+                &__tittle {
+                    color: var(--overdue-task-color)
+                }
+            }
+        }
+        &.move {
+            position: absolute;
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 700px;
+        }
     }
     .task-completed-#{$categorie} {
-        cursor: pointer;
         position: relative;
         margin: 3rem 0;
         background: $color;
         padding: 2rem 3rem;
         border-radius: 1rem;
-        @include task();
+        @include task($color);
+        &.overdue {
+            .task {
+                &__tittle {
+                    color: var(--overdue-task-color)
+                }
+            }
+        }
+        &.move {
+            position: absolute;
+            z-index: 1000;
+            max-width: 500px;
+            max-height: 700px;
+        }
     }
 }

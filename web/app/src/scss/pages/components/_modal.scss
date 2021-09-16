@@ -42,9 +42,7 @@
         justify-content: space-around;
     }
     &__button {
-        cursor: pointer;
-        border: none;
-        outline: none;
+        @include button-no-style();
         width: 10rem;
         padding: 1rem;
         border-radius: 1rem;
@@ -52,7 +50,7 @@
         background: #A6A3D9;
         &-close {
             margin-right: 0;
-            font-size: 2rem;
+            font-size: 3rem;
             color: var(--text-color)
         }
     }

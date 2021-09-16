@@ -46,9 +46,11 @@ export default function select() {
 
             //switching arrows icons
             if (this.parentElement.classList.contains('show')) {
-                selectIcon.setAttribute('src', '../../../static/images/dest/icons/arrow-up.png');
+                selectIcon.classList.remove('icon-arrow-down');
+                selectIcon.classList.add('icon-arrow-up');
             } else {
-                selectIcon.setAttribute('src', '../../../static/images/dest/icons/arrow-down.png');
+                selectIcon.classList.remove('icon-arrow-up');
+                selectIcon.classList.add('icon-arrow-down');
             }
 
         })
@@ -76,7 +78,7 @@ export default function select() {
                 currentText.setAttribute('id', `${currentId}`);
 
                 //change icon to arrow down if current element changes
-                selectIcon.setAttribute('src', '../../../static/images/dest/icons/arrow-down.png');
+                selectIcon.setAttribute('src', '../../../static/images/dest/icons/arrow-down.svg');
 
                 //close dropdown 
                 select.classList.remove('show');
@@ -174,7 +176,7 @@ export default function select() {
     };
 
     //inizialisation of selects
-    /*monthesDisplay();
-    yearsDisplay();*/
-    sortDisplay()
+    monthesDisplay();
+    yearsDisplay();
+    // sortDisplay()
 }

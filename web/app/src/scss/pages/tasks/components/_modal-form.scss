@@ -24,6 +24,7 @@
             &:-webkit-autofill:focus {
                 border: none;
                 box-shadow: 0 0 0px 1000px var(--theme-color) inset;
+                -webkit-text-fill-color: var(--text-color);
             }
         }
         &:after {

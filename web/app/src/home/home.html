@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
-    <link rel="stylesheet" href="src/css/app.min.css">
+    <link rel="stylesheet" href="../../src/css/app.min.css">
 </head>
 
 <body>
@@ -14,32 +14,27 @@
         <aside class="aside">
             <div id="aside" class="menu-user">
                 <div class="menu-user__photo-user">
-                    <img src="images/dest/no_avatar.png">
+                    <img src="../../../../static/images/dest/no_avatar.png">
                 </div>
-                <div class="menu-user__menu">
-                    <ul class="menu-user__stats">
-                        <li>
-                            <a href="#" class="active"><img src="images/dest/icons/home.png" alt="home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/dest/icons/bar-chart.png" alt="stats">Stats</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/dest/icons/home.png" alt="projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/dest/icons/calendar.png" alt="calendar">Calendar</a>
-                        </li>
-                    </ul>
-                    <ul class="menu-user__stats">
-                        <li>
-                            <a href="#"><img src="images/dest/icons/settings.png" alt="settings">Settings </a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/dest/icons/export.png" alt="log out">Log out</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><span class="icon-home"></span>Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active"><span class="icon-project"></span>Projects</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon-calendar"></span>Calendar</a>
+                    </li>
+                </ul>
+                <ul class="menu-user__stats">
+                    <li>
+                        <a href="#"><span class="icon-settings"></span>Settings </a>
+                    </li>
+                    <li>
+                        <a class="modal-link" href="#modal-logout"><span class="icon-logout"></span>Log out</a>
+                    </li>
+                </ul>
             </div>
         </aside>
         <main class="main-info">
@@ -48,8 +43,8 @@
                     <input type="text" placeholder="Search">
                 </div>
                 <div class="header__info">
-                    <a class="header__help" href="#"><img src="images/dest/icons/help.png" alt="help"></a>
-                    <a class="header__notification " href="#"><img src="images/dest/icons/notification.png" alt="notification"></a>
+                    <a class="header__help" href="#"><span class="icon-help"></span></a>
+                    <a class="header__notification " href="#"><span class="icon-notification"></span></a>
                     <a class="header__profile-change" href="#">Name Surname</a>
                 </div>
                 <div class="header__change-theme">
@@ -63,7 +58,6 @@
 
                 </div>
 
-
             </header>
 
             <div class="section-info">
@@ -73,7 +67,7 @@
 
     </main>
     </div>
-    <script type="module" src="app.min.js"></script>
+    <script type="module" src="../../app.min.js"></script>
 </body>
 
 </html>

@@ -18,24 +18,21 @@
                 </div>
                 <ul class="menu-user__stats">
                     <li>
-                        <a href="#"><img src="../../static/images/dest/icons/home.png" alt="home">Home</a>
+                        <a href="#"><span class="icon-home"></span>Home</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../../static/images/dest/icons/bar-chart.png" alt="stats">Stats</a>
+                        <a href="#" class="active"><span class="icon-project"></span>Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="active"><img src="../../static/images/dest/icons/home.png" alt="projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../../static/images/dest/icons/calendar.png" alt="calendar">Calendar</a>
+                        <a href="#"><span class="icon-calendar"></span>Calendar</a>
                     </li>
                 </ul>
                 <ul class="menu-user__stats">
                     <li>
-                        <a href="#"><img src="../../static/images/dest/icons/settings.png" alt="settings">Settings </a>
+                        <a href="#"><span class="icon-settings"></span>Settings </a>
                     </li>
                     <li>
-                        <a class="modal-link" href="#modal-logout"><img src="../../static/images/dest/icons/export.png" alt="log out">Log out</a>
+                        <a class="modal-link" href="#modal-logout"><span class="icon-logout"></span>Log out</a>
                     </li>
                 </ul>
             </div>
@@ -46,8 +43,8 @@
                     <input type="text" placeholder="Search">
                 </div>
                 <div class="header__info">
-                    <a class="header__help" href="#"><img src="../../static/images/dest/icons/help.png" alt="help"></a>
-                    <a class="header__notification " href="#"><img src="../../static/images/dest/icons/notification.png" alt="notification"></a>
+                    <a class="header__help" href="#"><span class="icon-help"></span></a>
+                    <a class="header__notification " href="#"><span class="icon-notification"></span></a>
                     <a class="header__profile-change" href="#">Name Surname</a>
                 </div>
                 <div class="header__change-theme">
@@ -67,8 +64,8 @@
                     <h1 class="section-info__tittle">Projects</h1>
                     <div class="select" id="select-sort">
                         <div class="select__header">
-                            <span id="week" class="select__current">This week</span>
-                            <img class="select__icon" src="../../static/images/dest/icons/arrow-down.png" alt="arrow-down">
+                            <span id="week" class="select__current"></span>
+                            <span class="icon-arrow-down select__icon"></span>
                         </div>
                         <div class="select__body">
 
@@ -77,7 +74,7 @@
                 </section>
                 <section class="tasks">
 
-                    <a class="tasks__add modal-link" href="#add-task">Add task +</a>
+                    <a class="tasks__add modal-link" href="#add-task">Add task <span class="icon-add"></span></a>
                     <div class="tasks__content">
 
                         <div class="tasks__elements" id="tasks-to-do">
@@ -85,17 +82,19 @@
 
 
                         </div>
-                        <div class=" tasks__elements " id="tasks-in-progress">
+                        <div class="tasks__elements" id="tasks-in-progress">
                             <h2 class="tasks__header">In progress</h2>
 
                         </div>
-                        <div class=" tasks__elements " id="tasks-completed">
+                        <div class="tasks__elements" id="tasks-completed">
                             <h2 class="tasks__header">Completed</h2>
+                            <span class="icon-cancel"></span>
 
                         </div>
                     </div>
                 </section>
             </div>
+
         </main>
 
     </div>
@@ -104,7 +103,7 @@
         <div class="modal__body">
             <div class=" modal__content">
                 <div class="modal__close">
-                    <a class="modal__button-close modal-close" href="#"><span>&#10006</span></a>
+                    <a class="modal__button-close modal-close" href="#"><span class="icon-cancel"></span></a>
                 </div>
 
                 <h2 class="modal__header">Add task</h2>
@@ -145,7 +144,7 @@
                     </div>
                     <div class="modal__form__textarea">
                         <label for="title">
-                       To do
+                            Description
                     </label>
                         <textarea></textarea >
                     </div>
@@ -158,11 +157,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal logout-->
     <div id="modal-logout" class="modal">
         <div class="modal__body">
             <div class="modal__content">
                 <div class="modal__close">
-                    <a class="modal__button-close modal-close" href="#"><span>&#10006</span></a>
+                    <a class="modal__button-close modal-close" href="#"><span class="icon-cancel"></span></a>
                 </div>
             <h1 class="modal__header">Do you realy want to logout?</h1>
             <div class="modal__buttons">
@@ -171,6 +172,77 @@
             </div>
         </div>
 
+        </div>
+    </div>
+     <!-- Modal edit task-->
+     <div id="modal-edit" class="modal">
+        <div class="modal__body">
+            <div class="modal__content ">
+                <div class="modal__close">
+                    <a class="modal__button-close modal-close" href="#"><span class="icon-cancel"></span></a>
+                </div>
+                <h1 class="modal__header">Edit task</h1>
+                <div class="modal__task-edit  modal__form">
+                <div class="modal__form__element">
+                    <label for="modal-edit-title">
+                    Title
+                </label>
+                    <input id="modal-edit-title" type="text" placeholder="Title" >
+                </div>
+                <div class="modal__form__element">
+                    <label >
+                    Categories
+                </label>
+                    <div class="modal__form__categories">
+                        <input type="radio" name="modal-edit-categories" value="hobby" id="modal-edit-hobby" class="radio-hobby">
+                        <label for="modal-edit-hobby">Hobby</label>
+
+                        <input type="radio" name="modal-edit-categories" value="sport" id="modal-edit-sport" class="radio-sport">
+                        <label for="modal-edit-sport">sport</label>
+
+                        <input type="radio" name="modal-edit-categories" value="education" id="modal-edit-education" class="radio-education">
+                        <label for="modal-edit-education"> education</label>
+
+                        <input type="radio" name="modal-edit-categories" value="other" id="modal-edit-other" class="radio-other">
+                        <label for="modal-edit-other">other</label>
+
+                        <input type="radio" name="modal-edit-categories" value="work" id="modal-edit-work" class="radio-work">
+                        <label for="modal-edit-work">work</label>
+                    </div>
+                </div>
+                <div class="modal__form__element">
+                    <label for="modal-edit-deadline">
+                    Deadline
+                </label>
+                    <input type="date" id='modal-edit-deadline'>
+                </div>
+                <div class="modal__form__textarea">
+                    <label for="modal-edit-description">
+                   Description
+                </label>
+                    <textarea id="modal-edit-description"></textarea>
+                    </div>
+                    <div class="modal__buttons">
+                        <button type="submit" class="modal__button">Save</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal delete task-->
+    <div id="modal-delete" class="modal">
+        <div class="modal__body">
+            <div class="modal__content">
+                <div class="modal__close">
+                    <a class="modal__button-close modal-close" href="#"><span class="icon-cancel"></span></a>
+                </div>
+                <div class="modal__task-delete">
+                    <h1 class="modal__header"></h1>
+                    <div class="modal__buttons">
+                        <button class="modal__button">Yes</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="module" src="../../app.min.js"></script>

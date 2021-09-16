@@ -1,34 +1,113 @@
 @font-face {
+    font-family: 'icomoon';
+    src: url('../../../static/fonts/icomoon-font/icomoon.eot');
+    src: url('../../../static/fonts/icomoon-font/icomoon.eot') format('embedded-opentype'), url('../../../static/fonts/icomoon-font/icomoon.ttf') format('truetype'), url('../../../static/fonts/icomoon-font/icomoon.woff') format('woff'), url('../../../static/fonts/icomoon-font/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    //speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+    content: "\e900";
+}
+
+.icon-arrow-up:before {
+    content: "\e901";
+}
+
+.icon-calendar:before {
+    content: "\e902";
+}
+
+.icon-delete:before {
+    content: "\e903";
+}
+
+.icon-edit-button:before {
+    content: "\e904";
+}
+
+.icon-help:before {
+    content: "\e905";
+}
+
+.icon-home:before {
+    content: "\e906";
+}
+
+.icon-logout:before {
+    content: "\e907";
+}
+
+.icon-notification:before {
+    content: "\e908";
+}
+
+.icon-project:before {
+    content: "\e909";
+}
+
+.icon-search:before {
+    content: "\e90a";
+}
+
+.icon-settings:before {
+    content: "\e90b";
+}
+
+.icon-cancel:before {
+    content: "\e90c";
+}
+
+.icon-add:before {
+    content: "\e90d";
+}
+
+@font-face {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: bold;
-    src: local('Quicksand'), url('../../fonts/Quicksand-Bold.ttf') format('ttf');
+    src: local('Quicksand'), url('../../fonts/default-fonts/Quicksand-Bold.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 300;
-    src: local('Quicksand'), url('../../fonts/Quicksand-Light.ttf') format('ttf');
+    src: local('Quicksand'), url('../../fonts/default-fonts/Quicksand-Light.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 500;
-    src: local('Quicksand'), url('../../fonts/Quicksand-Regular.ttf') format('ttf');
+    src: local('Quicksand'), url('../../fonts/default-fonts/Quicksand-Regular.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
-    src: local('Quicksand'), url('../../fonts/Quicksand-Medium.ttf') format('ttf');
+    src: local('Quicksand'), url('../../fonts/default-fonts/Quicksand-Medium.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    src: local('Quicksand'), url('../../fonts/Quicksand-SemiBold.ttf') format('ttf');
+    src: local('Quicksand'), url('../../fonts/default-fonts/Quicksand-SemiBold.ttf') format('ttf');
 }

@@ -1,4 +1,5 @@
 .tasks {
+    position: relative;
     color: var(--text-color);
     padding: 3rem;
     display: flex;
@@ -26,6 +27,9 @@
         background: var(--tasks-blocks-bg);
         padding: 3rem;
         border-radius: 1rem;
+        &.hover {
+            background: var(--overdue-task-color);
+        }
     }
     &__header {
         text-align: center;
