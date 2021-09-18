@@ -78,13 +78,15 @@ export default function select() {
                 currentText.setAttribute('id', `${currentId}`);
 
                 //change icon to arrow down if current element changes
-                selectIcon.setAttribute('src', '../../../static/images/dest/icons/arrow-down.svg');
+                selectIcon.classList.remove('icon-arrow-up');
+                selectIcon.classList.add('icon-arrow-down');
 
                 //close dropdown 
                 select.classList.remove('show');
             })
         });
     }
+
 
     const monthesDisplay = function() {
 
@@ -122,7 +124,6 @@ export default function select() {
             { month: 'November', id: 10 },
             { month: 'December', id: 11 }
         ];
-
         //call the function to display select monthes 
         displaySelect(months, selectMonthId, currentMonth())
     };
@@ -147,7 +148,6 @@ export default function select() {
             { year: 2018, id: 2018 },
             { year: 2017, id: 2017 }
         ];
-
         //call the function to display select years 
         displaySelect(years, selectYearId, currentSelect);
     };
@@ -161,7 +161,7 @@ export default function select() {
         };
 
         //id of select year
-        const selectYearId = 'select-sort';
+        const selectSortId = 'select-sort';
 
         //array of years objects
         const sort = [
@@ -171,8 +171,10 @@ export default function select() {
             { name: 'All', id: 'all' }
         ];
 
+
         //call the function to display select years 
-        displaySelect(sort, selectYearId, currentSelect);
+        displaySelect(sort, selectSortId, currentSelect);
+
     };
 
     //inizialisation of selects

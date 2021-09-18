@@ -57,7 +57,7 @@ export default class View {
 
     }
 
-    calendarRassing(date, dataOfTasks) {
+    calendarRassing(date, dataOfTask) {
 
 
 
