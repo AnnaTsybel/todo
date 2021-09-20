@@ -1,1 +1,59 @@
-.slider {}
+.slider {
+    &__wrapper {
+        position: relative;
+        height: 42rem;
+        width: 78rem;
+        margin: 0 auto;
+    }
+    &__control {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 1.6rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 0 3px 3px 0;
+        background: none;
+        color: var(--text-color);
+        &:hover {
+            background-color: palevioletred;
+        }
+        &.prev {
+            left: -2rem;
+        }
+        &.next {
+            right: -2rem;
+        }
+    }
+    &__items {
+        position: relative;
+    }
+    &__item {
+        object-fit: cover;
+        width: 30rem;
+        height: 42rem;
+        &.active {
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+        }
+        &.additional {
+            position: absolute;
+            z-index: 0;
+            height: 34rem;
+            width: 22rem;
+            bottom: 0;
+            &__next {
+                background-color: rgba(0, 0, 0, .3);
+                right: 3.5rem;
+            }
+            &__prev {
+                background-color: rgba(0, 0, 0, .3);
+                left: 3.5rem;
+            }
+        }
+    }
+}

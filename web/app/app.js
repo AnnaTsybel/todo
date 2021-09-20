@@ -63,7 +63,7 @@ if (name === 'calendar') {
     const viewTask = new taskView(modelTask);
     const controllerTask = new taskController(modelTask, viewTask);
 }
-
+const sliders = slider();
 const modals = modal();
 
 //const pass = password();
