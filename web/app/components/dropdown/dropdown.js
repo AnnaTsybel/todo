@@ -1,5 +1,5 @@
 export default function select() {
-
+    const name = 'home';
     let displaySelect = function(arrayOfObj, id, currentSelect) {
         //get element which will be displayed
         const selectObj = document.getElementById(`${id}`);
@@ -178,7 +178,13 @@ export default function select() {
     };
 
     //inizialisation of selects
-    monthesDisplay();
-    yearsDisplay();
-    // sortDisplay()
+    if (name === 'calendar') {
+        monthesDisplay();
+        yearsDisplay();
+    } else if (name === 'tasks') {
+        sortDisplay()
+    } else if (name === 'home') {
+
+    }
+
 }

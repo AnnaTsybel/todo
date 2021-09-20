@@ -12,6 +12,8 @@ import dropdownCreate from './components/dropdown/dropdown-create.js';
 import dropdown from './components/dropdown/dropdown.js';
 import password from './components/password/password.js';
 import themes from './components/theme/theme.js';
+import createSlider from './components/slider/createslider.js';
+import slider from './components/slider/slider.js';
 import modal from './components/modal/modal.js';
 import router from './components/router/router.js';
 import calendarModel from './components/calendar/Model.js';
@@ -41,26 +43,26 @@ document.addEventListener("DOMContentLoaded", theme);
 const asides = aside();
 
 const sectionInfosElem = [...dropdownCreate(), ...button()]
-console.log(sectionInfosElem)
+
 let sectionInfos = sectionInfo(sectionInfosElem);
-console.log(sectionInfos)
-const a = [sectionInfos, contentMain()]
-const b = [...a]
-
-
+const content = [sectionInfos, contentMain()]
+const b = [...content]
 
 const mainInfos = mainInfo(b);
 
 const drop = dropdown();
+const name = 'home';
 
-const modelCalendar = new calendarModel();
-const viewCalendar = new calendarView(modelCalendar);
-const controllerCalendar = new calendarController(modelCalendar, viewCalendar);
 
-/*const modelTask = new taskModel();
-const viewTask = new taskView(modelTask);
-const controllerTask = new taskController(modelTask, viewTask);*/
-
+if (name === 'calendar') {
+    const modelCalendar = new calendarModel();
+    const viewCalendar = new calendarView(modelCalendar);
+    const controllerCalendar = new calendarController(modelCalendar, viewCalendar);
+} else if (name === 'tasks') {
+    const modelTask = new taskModel();
+    const viewTask = new taskView(modelTask);
+    const controllerTask = new taskController(modelTask, viewTask);
+}
 
 const modals = modal();
 

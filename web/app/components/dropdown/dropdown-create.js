@@ -1,4 +1,5 @@
 export default function select() {
+    const name = 'home';
     const dropdowns = [{
             id: 'select-sort',
             page: 'tasks'
@@ -10,7 +11,7 @@ export default function select() {
         {
             id: 'select-year',
             page: 'calendar'
-        },
+        }
     ];
     //create element 
     function createElement(tag, className) {
@@ -38,7 +39,7 @@ export default function select() {
     }
     let arr = []
     dropdowns.forEach(function(el) {
-        if (el.page === 'calendar') {
+        if (el.page === name) {
             arr.push(createDropdown(el.id));
         }
     });

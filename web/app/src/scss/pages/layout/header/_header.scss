@@ -5,25 +5,11 @@
     align-items: center;
     padding: 2rem 4rem;
     background: var(--header-bg);
-    &__search {
-        input {
-            padding: 0.5rem 0.5rem 0.5rem 3rem;
-            border: none;
-            outline: none;
-            font-size: 1.8rem;
-            background: url('../../../../../static/images/dest/icons/search.png') no-repeat;
-            background-size: auto 70%;
-            background-position: center left;
-        }
-    }
     &__help,
     &__notification,
     &__profile-change {
         color: var(--text-color);
         font-size: 1.8rem;
-        img {
-            width: 2rem;
-            height: 2rem;
-        }
+        margin: 0 0.5rem;
     }
 }

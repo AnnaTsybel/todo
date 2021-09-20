@@ -1,4 +1,6 @@
 export default function modalCreate() {
+    const name = 'home';
+    //fucntion to create elements with classes
     function createElement(tag, className) {
 
         const element = document.createElement(tag);
@@ -9,50 +11,242 @@ export default function modalCreate() {
 
         return element;
     }
-    /* <div class="modal__close">
-                    <a class="modal__button-close modal-close" href="#"><span>&#10006</span></a>
-                </div>
-                <h1 class="modal__header">Do you realy want to logout?</h1>
-                <div class="modal__buttons">
-                    <button class="modal__button">Yes</button>
 
-                </div>*/
-    function createModalLogout() {
-        const modalContent = createElement('div', 'modal__content');
+    //function to create close button
+    function createCloseButton() {
         const modalClose = createElement('div', 'modal__close');
         const modalCloseButton = createElement('a', 'modal__button-close');
         modalCloseButton.setAttribute('href', '#')
         modalCloseButton.classList.add('modal-close');
         const modalCloseButtonImg = createElement('span', 'icon-cancel');
         modalCloseButton.appendChild(modalCloseButtonImg)
-        modalClose.appendChild(modalCloseButton)
+        modalClose.appendChild(modalCloseButton);
+        return modalClose;
+    }
+    //function to create close button
+    function createSubmitButton(contentOffButton) {
+        const modalButtonContainer = createElement('div', 'modal__buttons');
+        const modalButton = createElement('button', 'modal__button');
+        modalButton.textContent = contentOffButton;
+        modalButtonContainer.appendChild(modalButton);
+        return modalButtonContainer;
+    }
+    //function to create modal of logout
+    function createModalLogout() {
+        //create the tag to drop content into it
+        const modalContent = createElement('div', 'modal__content');
+
+        //create close button
+        const modalClose = createCloseButton();
+
+        //create header of modal
         const modalHeader = createElement('h1', 'modal__header');
         modalHeader.textContent = 'Do you realy want to logout?';
-        const modalButtons = createElement('div', 'modal__buttons');
-        const modalButtonOk = createElement('button', 'modal__button');
-        modalButtonOk.textContent = 'Yes';
-        modalButtons.appendChild(modalButtonOk);
-        modalContent.append(modalClose, modalHeader, modalButtons)
+
+        //create  button
+        const modalButtonSubmit = createSubmitButton('Yes')
+
+        modalContent.append(modalClose, modalHeader, modalButtonSubmit)
         return modalContent;
 
     }
 
+    //function to create modal of calendar
     function createModalCalendar() {
         const modalContent = createElement('div', 'modal__content');
         const modalCalendarTask = createElement('div', 'modal__calendar__task');
-        modalContent.append(modalCalendarTask)
+        modalContent.append(modalCalendarTask);
         return modalContent;
     }
-    const name = 'calendar';
-    const modals = [{
-        id: 'modal-logout',
-        page: 'all',
-        content: createModalLogout()
-    }, {
-        page: 'calendar',
-        content: createModalCalendar()
-    }, ]
+    //function to create radiobuttons
+    function createRadioButton(elem, elemTag) {
 
+        //container for radiobuttons
+        const elementCategoriesContainer = createElement('div', 'modal__form__categories');
+
+        if (elem.length > 0) {
+            for (let i = 0; i < elem.length; i++) {
+                //write current element in variable
+                let radioButton = elem[i];
+
+                //create input for current radiobutton
+                const radioInput = document.createElement('input');
+
+                //set class to current radiobutton
+                radioInput.classList.add(`radio-${radioButton}`);
+
+                //set attributes to current radiobutton 
+                radioInput.setAttribute('type', 'radio');
+                radioInput.setAttribute('name', `${elemTag}-categories`);
+                radioInput.setAttribute('value', radioButton);
+                radioInput.setAttribute('id', `${elemTag}-${radioButton}`);
+
+                //create label for current radiobutton
+                const radioLabel = document.createElement('label');
+                radioLabel.setAttribute('for', `${elemTag}-${radioButton}`);
+                radioLabel.innerHTML = radioButton;
+                //
+                elementCategoriesContainer.append(radioInput, radioLabel);
+            }
+        }
+
+        return elementCategoriesContainer;
+    }
+
+    function createModalEditAdd(elementTag, elem) {
+        //create the tag to drop content into it
+        const modalContent = createElement('div', 'modal__content');
+
+        //create close button
+        const modalClose = createCloseButton();
+
+        //create header of modal
+        const modalHeader = createElement('h1', 'modal__header');
+        modalHeader.innerHTML = 'Edit task';
+
+        //create form of edit modal
+        const modalForm = createElement('form', 'modal__form');
+        modalForm.classList.add(`modal__task-${elem}`);
+
+        //create title section
+        const modalFormElementTittle = createElement('div', 'modal__form__element');
+
+        //create label for title section
+        const modalFormElementTittleLabel = createElement('label');
+        modalFormElementTittleLabel.setAttribute('for', `${elementTag}-title`);
+        modalFormElementTittleLabel.innerHTML = 'Title';
+
+        //create input for title section
+        const modalFormElementTittlelnput = createElement('input');
+        modalFormElementTittlelnput.setAttribute('type', 'text');
+        modalFormElementTittlelnput.setAttribute('placeholder', 'Title');
+        modalFormElementTittlelnput.setAttribute('id', `${elementTag}-title`);
+
+        //append label and input into categories section
+        modalFormElementTittle.append(modalFormElementTittleLabel, modalFormElementTittlelnput);
+
+        //create categories section
+        const modalFormElementCategories = createElement('div', 'modal__form__element');
+
+        //create label for categories section
+        const modalFormElementCategoriesLabel = createElement('label');
+        modalFormElementCategoriesLabel.innerHTML = 'Categories';
+
+        //array with names for radiobuttons
+        const modalFormCategories = ['hobby', 'sport', 'education', 'other', 'work'];
+
+        //create content for categories section
+        const modalFormElementCategoriesContainer = createRadioButton(modalFormCategories, 'modal-edit');
+
+        //append label and content into categories section
+        modalFormElementCategories.append(modalFormElementCategoriesLabel, modalFormElementCategoriesContainer);
+
+        //create deadline section
+        const modalFormElementDeadline = createElement('div', 'modal__form__element');
+
+        //create label for deadline section
+        const modalFormElementDeadlineLabel = createElement('label');
+        modalFormElementDeadlineLabel.innerHTML = 'Deadline';
+        modalFormElementDeadlineLabel.setAttribute('for', `${elementTag}-deadline`);
+
+        //create input for deadline section
+        const modalFormElementDeadlineInput = createElement('input');
+        modalFormElementDeadlineInput.setAttribute('id', `${elementTag}-deadline`);
+        modalFormElementDeadlineInput.setAttribute('type', 'date');
+
+        //append label and input into deadline section
+        modalFormElementDeadline.append(modalFormElementDeadlineLabel, modalFormElementDeadlineInput);
+
+        //create description section
+        const modalFormElementDescription = createElement('div', 'modal__form__textarea');
+
+        //create label for description section
+        const modalFormElementDescriptionLabel = createElement('label');
+        modalFormElementDescriptionLabel.innerHTML = 'Description';
+        modalFormElementDescriptionLabel.setAttribute('for', `${elementTag}-description`);
+
+        //create textarea for description section
+        const modalFormElementDescriptionTextarea = createElement('textarea');
+        modalFormElementDescriptionTextarea.setAttribute('id', `${elementTag}-description`)
+
+        //append label and textarea into description section
+        modalFormElementDescription.append(modalFormElementDescriptionLabel, modalFormElementDescriptionTextarea)
+
+        //create  button
+        const modalButtonSubmit = createSubmitButton('Save')
+
+        //append elements into form
+        modalForm.append(modalFormElementTittle, modalFormElementCategories, modalFormElementDeadline, modalFormElementDescription, modalButtonSubmit)
+
+        //append elements into content tag
+        modalContent.append(modalClose, modalHeader, modalForm);
+
+        //return content tag
+        return modalContent;
+    }
+
+    const modalEdit = createModalEditAdd('modal-edit', 'edit');
+    const modalAdd = createModalEditAdd('modal-add', 'add');
+    //function to create delete tasks modal
+    function createModalDeleteTasks() {
+
+        //create the tag to drop content into it
+        const modalContent = createElement('div', 'modal__content');
+
+        //create close button
+        const modalClose = createCloseButton();
+
+        //create header of modal
+        const modalHeader = createElement('h1', 'modal__header');
+        //
+        const modalFormDeleteContainer = createElement('div', 'modal__task-delete');
+
+        //create buttons Container
+        const modalFormButtonContainer = createElement('div', 'modal__buttons');
+
+        //create button submit
+        const modalFormButton = createElement('button', 'modal__button');
+        modalFormButton.setAttribute('type', 'submit');
+        modalFormButton.innerHTML = 'Save';
+
+        //append button into container
+        modalFormButtonContainer.appendChild(modalFormButton);
+
+        //append header and button into container
+        modalFormDeleteContainer.append(modalHeader, modalFormButtonContainer);
+
+        //append elements to content tag
+        modalContent.append(modalClose, modalFormDeleteContainer);
+        return modalContent;
+    }
+
+    //araay of objects which are corresponding to modals
+    const modals = [{
+            id: 'modal-logout',
+            page: 'all',
+            content: createModalLogout()
+        }, {
+            page: 'calendar',
+            content: createModalCalendar()
+        }, {
+            id: 'task-add',
+            page: 'tasks',
+            content: modalAdd
+        },
+        {
+            id: 'modal-edit',
+            page: 'tasks',
+            content: modalEdit
+        },
+        {
+            id: 'modal-delete',
+            page: 'tasks',
+            content: createModalDeleteTasks()
+        },
+    ]
+
+
+    //function to create basic modal
     function createModal(elements) {
         let arr = [];
         elements.forEach(element => {
@@ -69,5 +263,7 @@ export default function modalCreate() {
         });
         return arr;
     }
+
+
     return createModal(modals);
 }

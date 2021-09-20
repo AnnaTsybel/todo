@@ -1,4 +1,5 @@
 export default function sectionInfo(elements) {
+    const name = 'home';
 
     function createElement(tag, className) {
 
@@ -24,7 +25,16 @@ export default function sectionInfo(elements) {
         return sectionInfo;
 
     }
+    if (name === 'calendar') {
+        let calendar = createSection('Calendar', elements);
+        return calendar;
+    } else if (name === 'tasks') {
+        let tasks = createSection('Projects', elements);
+        return tasks;
+    } else if (name === 'home') {
+        let tasks = createSection('Home', elements);
+        return tasks;
+    }
 
-    let hi = createSection('Calendar', elements);
-    return hi;
+
 }

@@ -63,6 +63,7 @@ $color in $categories-color {
             z-index: 1000;
             max-width: 500px;
             max-height: 700px;
+            color: var(--text-color)
         }
         @include task($color);
     }
@@ -85,6 +86,7 @@ $color in $categories-color {
             z-index: 1000;
             max-width: 500px;
             max-height: 700px;
+            color: var(--text-color)
         }
     }
     .task-completed-#{$categorie} {
@@ -106,6 +108,7 @@ $color in $categories-color {
             z-index: 1000;
             max-width: 500px;
             max-height: 700px;
+            color: var(--text-color)
         }
     }
 }

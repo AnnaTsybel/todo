@@ -1,4 +1,6 @@
 export default function button() {
+    const name = 'home';
+
     function createElement(tag, className) {
 
         const element = document.createElement(tag);
@@ -9,12 +11,18 @@ export default function button() {
 
         return element;
     }
-    const name = 'calendar';
+
     let buttons = [{
         id: 'button-calendar',
         classes: 'section-info__button',
         text: 'Change',
         page: 'calendar',
+        parent: 'section-info'
+    }, {
+        id: 'button-tasks',
+        classes: 'section-info__button',
+        text: 'Change',
+        page: 'tasks',
         parent: 'section-info'
     }]
 
@@ -27,11 +35,10 @@ export default function button() {
                 sectionInfoButton.setAttribute('id', el.id);
                 arr.push(sectionInfoButton);
             }
-
         })
         return arr;
     }
 
-    let hi2 = buttonCreate(buttons);
-    return hi2;
+    let buttonsContainer = buttonCreate(buttons);
+    return buttonsContainer;
 }

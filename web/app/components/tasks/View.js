@@ -323,11 +323,9 @@ export default class View {
                     function moveAt(e) {
                         currentTask.style.left = e.pageX - currentTask.offsetWidth / 2 + 'px';
                         currentTask.style.top = e.pageY - currentTask.offsetHeight / 2 + 'px';
-
                     }
 
                     const buttonMoveElem = currentTask.querySelector('.task__button-move');
-
 
                     //get width and height of current element
                     let widthElem = currentTask.clientWidth;

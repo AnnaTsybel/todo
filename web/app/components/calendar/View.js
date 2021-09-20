@@ -14,7 +14,15 @@ export default class View {
         });
 
     }
+    createElement(tag, className) {
+        const element = document.createElement(tag);
 
+        if (className) {
+            element.classList.add(className);
+        }
+
+        return element;
+    };
     //function to fill calendar
     calendarFill(data) {
 
@@ -58,10 +66,8 @@ export default class View {
     }
 
     calendarRassing(date, dataOfTask) {
-
-
-
-        //array output 
+        console.log(dataOfTask.models)
+            //array output 
         const calendar = this.calendarFill(date);
 
         //array of days in week
@@ -199,6 +205,7 @@ export default class View {
         //get all modal calendar links collection
         const modalLinksCollection = document.querySelectorAll('.modal-calendar-link');
 
+
         //function to open modal
         function openModal(modal) {
             modal.classList.add('open');
@@ -234,10 +241,19 @@ export default class View {
 
                     //get parent modal tag
                     let modal = calendarModal.closest('.modal');
-
+                    let modalContent = modal.querySelector('.modal__content');
+                    const modalClose = this.createElement('div', 'modal__close');
+                    const modalCloseButton = this.createElement('a', 'modal__button-close');
+                    modalCloseButton.setAttribute('href', '#')
+                    modalCloseButton.classList.add('modal-close');
+                    const modalCloseButtonImg = this.createElement('span', 'icon-cancel');
+                    modalCloseButton.appendChild(modalCloseButtonImg)
+                    modalClose.appendChild(modalCloseButton);
                     //remove previous and add new id to modal tag which will display task
+
+
                     modal.removeAttribute('id');
-                    modal.setAttribute('id', `modal-task-${data.models.id}`)
+                    modal.setAttribute('id', `modal-task-${data.models.id}`);
 
                     //create tittle of modal
                     let modalTaskTittle = document.createElement('div');
@@ -248,7 +264,7 @@ export default class View {
 
                     //create description of modal
                     let modalTaskDescription = document.createElement('div');
-                    modalTaskDescription.classList.add('modal__calendar__task__description')
+                    modalTaskDescription.classList.add('modal__calendar__task__description');
 
                     //display json of description without quotes 
                     modalTaskDescription.innerText = JSON.stringify(data.models.description).replace(/"/g, '')
@@ -261,10 +277,19 @@ export default class View {
                     modalTaskDeadline.innerText = `${JSON.stringify(data.models.year)}.${JSON.stringify(data.models.month)}.${JSON.stringify(data.models.day)}`;
 
                     //append all of elements in modal
-                    calendarModal.appendChild(modalTaskTittle);
-                    calendarModal.appendChild(modalTaskDescription);
-                    calendarModal.appendChild(modalTaskDeadline);
+                    calendarModal.append(modalClose, modalTaskTittle, modalTaskDescription, modalTaskDeadline);
 
+                    let modalClosed = document.querySelectorAll('.modal-close');
+                    console.log(modalClosed);
+                    if (modalClosed.length > 0) {
+                        for (let i = 0; i < modalClosed.length; i++) {
+                            modalClosed[i].addEventListener('click', el => {
+                                let modal = modalClosed[i].closest('.modal');
+                                closeModal(modal);
+                                el.preventDefault();
+                            })
+                        }
+                    }
                     //function to open modal
                     openModal(modal);
 
@@ -279,7 +304,14 @@ export default class View {
 
                     //get parent modal tag
                     let modal = calendarModal.closest('.modal');
-
+                    let modalContent = modal.querySelector('.modal__content');
+                    const modalClose = this.createElement('div', 'modal__close');
+                    const modalCloseButton = this.createElement('a', 'modal__button-close');
+                    modalCloseButton.setAttribute('href', '#')
+                    modalCloseButton.classList.add('modal-close');
+                    const modalCloseButtonImg = this.createElement('span', 'icon-cancel');
+                    modalCloseButton.appendChild(modalCloseButtonImg)
+                    modalClose.appendChild(modalCloseButton);
                     //remove previous and add new id to modal tag which will display task
                     modal.removeAttribute('id');
                     modal.setAttribute('id', `modal-task-default`);
@@ -292,7 +324,7 @@ export default class View {
                     modalTaskTittle.innerText = 'No tasks to display';
 
                     //append tittle in modal
-                    calendarModal.appendChild(modalTaskTittle);
+                    calendarModal.append(modalClose, modalTaskTittle);
 
 
                     //function to open modal
@@ -304,5 +336,15 @@ export default class View {
 
             }
         }
+        let modalClosed = document.querySelector('.modal-close');
+        console.log(modalClosed);
+        modalClosed.addEventListener('click', function(el) {
+            console.log(2);
+            let modal = modalClosed.closest('.modal');
+            closeModal(modal);
+            el.preventDefault();
+        })
     }
+
+
 }
