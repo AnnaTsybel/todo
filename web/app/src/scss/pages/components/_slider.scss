@@ -9,18 +9,14 @@
         position: absolute;
         top: 50%;
         width: auto;
-        padding: 1.6rem;
         cursor: pointer;
         border: none;
         outline: none;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 3rem;
         border-radius: 0 3px 3px 0;
         background: none;
         color: var(--text-color);
-        &:hover {
-            background-color: palevioletred;
-        }
         &.prev {
             left: -2rem;
         }

@@ -84,11 +84,11 @@ export default function contentMain() {
         //button next in slider
         let sliderButtonRight = createElement('button', 'slider__control');
         sliderButtonRight.classList.add('next');
-        let sliderButtonRightIcon = createElement('span', 'icon-arrow-down');
+        let sliderButtonRightIcon = createElement('span', 'icon-arrow-right');
         sliderButtonRight.appendChild(sliderButtonRightIcon);
 
         //button prev in slider
-        let sliderButtonLeftIcon = createElement('span', 'icon-arrow-up');
+        let sliderButtonLeftIcon = createElement('span', 'icon-arrow-left');
         let sliderButtonLeft = createElement('button', 'slider__control');
         sliderButtonLeft.classList.add('prev');
         sliderButtonLeft.appendChild(sliderButtonLeftIcon);

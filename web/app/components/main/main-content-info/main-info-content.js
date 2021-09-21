@@ -1,6 +1,9 @@
 export default function mainInfo(elements) {
-    const mainInfoContent = document.querySelector('.main-info__content');
-    elements.forEach(element => {
-        mainInfoContent.append(element);
-    });
+    const name = 'login-enter';
+    if (name !== 'login-enter' && 'login-registration') {
+        const mainInfoContent = document.querySelector('.main-info__content');
+        elements.forEach(element => {
+            mainInfoContent.append(element);
+        });
+    }
 }

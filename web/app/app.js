@@ -5,6 +5,7 @@ import header from './components/header/header.js';
 import aside from './components/aside/aside.js';
 import mainInfo from './components/main/main-content-info/main-info-content.js';
 import button from './components/buttons/button.js';
+import loginPage from './components/main/main-content-info/components/login-page.js';
 import modalCreate from './components/modal/modal-create.js';
 import sectionInfo from './components/main/main-content-info/components/section-info/main-content-section-info.js';
 import contentMain from './components/main/main-content-info/components/content/content.js';
@@ -22,36 +23,55 @@ import calendarController from './components/calendar/Controller.js';
 import taskModel from './components/tasks/Model.js';
 import taskView from './components/tasks/View.js';
 import taskController from './components/tasks/Controller.js';
+
 //local storages
 const local = localStorage();
 const localUser = localStorageUser();
 
 //layout main components
+
+const name = 'login-enter';
 const mains = main();
 const root = document.querySelector('.root');
 root.append(mains)
-const createModals = modalCreate();
-createModals.forEach(function(el) {
-    root.append(el)
-})
-const headers = header();
+if (name === 'login-enter') {
 
-const theme = themes();
+    const loginPages = loginPage();
 
-document.addEventListener("DOMContentLoaded", theme);
+    const pass = password();
 
-const asides = aside();
+} else {
 
-const sectionInfosElem = [...dropdownCreate(), ...button()]
 
-let sectionInfos = sectionInfo(sectionInfosElem);
-const content = [sectionInfos, contentMain()]
-const b = [...content]
+    const createModals = modalCreate();
+    createModals.forEach(function(el) {
+        root.append(el)
+    });
 
-const mainInfos = mainInfo(b);
+    //header create
+    const headers = header();
 
-const drop = dropdown();
-const name = 'home';
+    //enter themes
+    const theme = themes();
+    document.addEventListener("DOMContentLoaded", theme);
+
+    //aside create
+    const asides = aside();
+
+    //section info
+    const sectionInfosElem = [...dropdownCreate(), ...button()]
+    let sectionInfos = sectionInfo(sectionInfosElem);
+    const content = [sectionInfos, contentMain()]
+    const b = [...content]
+
+    //main-content
+    const mainInfos = mainInfo(b);
+    //drop
+    const drop = dropdown();
+    const sliders = slider();
+    const modals = modal();
+
+}
 
 
 if (name === 'calendar') {
@@ -63,7 +83,3 @@ if (name === 'calendar') {
     const viewTask = new taskView(modelTask);
     const controllerTask = new taskController(modelTask, viewTask);
 }
-const sliders = slider();
-const modals = modal();
-
-//const pass = password();
