@@ -1,6 +1,6 @@
 export default function header() {
     let user = JSON.parse(localStorage.getItem('users'));
-    const name = 'login-enter';
+    const name = 'settings';
     if (name !== 'login-enter' && 'login-registration') {
         function createElement(tag, className) {
             const element = document.createElement(tag);

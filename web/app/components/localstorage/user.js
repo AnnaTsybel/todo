@@ -3,7 +3,9 @@ export default function usersStorage() {
         id: 1,
         name: 'Oleg',
         surname: 'dsgvds',
-
+        password: '131',
+        login: 'kek',
+        email: 'oleg123@gmail.com'
 
     }
 

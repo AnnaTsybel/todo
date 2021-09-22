@@ -1,5 +1,5 @@
 export default function sectionInfo(elements) {
-    const name = 'home';
+    const name = 'settings';
 
     function createElement(tag, className) {
 
@@ -33,6 +33,9 @@ export default function sectionInfo(elements) {
         return tasks;
     } else if (name === 'home') {
         let tasks = createSection('Home', elements);
+        return tasks;
+    } else if (name === 'settings') {
+        let tasks = createSection('Settings', elements);
         return tasks;
     }
 

@@ -1,5 +1,5 @@
 export default function select() {
-    const name = 'home';
+    const name = 'settings';
     const dropdowns = [{
             id: 'select-sort',
             page: 'tasks'
@@ -11,6 +11,10 @@ export default function select() {
         {
             id: 'select-year',
             page: 'calendar'
+        },
+        {
+            id: 'select-settings',
+            page: 'settings'
         }
     ];
     //create element 

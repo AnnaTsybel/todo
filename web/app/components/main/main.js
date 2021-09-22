@@ -1,5 +1,5 @@
 export default function main() {
-    const name = 'login-enter';
+    const name = 'settings';
 
     function createElement(tag, className) {
         const element = document.createElement(tag);
@@ -10,7 +10,7 @@ export default function main() {
 
         return element;
     }
-    if (name === 'login-enter' || name !== 'login-registration') {
+    if (name === 'login-enter' || name === 'login-registration') {
         const main = createElement('main', 'login-page');
         return main;
     } else {

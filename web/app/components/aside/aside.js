@@ -1,7 +1,7 @@
 export default function aside() {
     let user = JSON.parse(localStorage.getItem('users'));
-    const name = 'login-enter'
-    if (name !== 'login-enter' && 'login-registration') {
+    const name = 'settings'
+    if (name !== 'login-enter' && name !== 'login-registration') {
 
         function createElement(tag, className) {
             const element = document.createElement(tag);

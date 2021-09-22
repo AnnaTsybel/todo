@@ -1,5 +1,5 @@
 export default function select() {
-    const name = 'home';
+    const name = 'settings';
     let displaySelect = function(arrayOfObj, id, currentSelect) {
         //get element which will be displayed
         const selectObj = document.getElementById(`${id}`);
@@ -176,6 +176,29 @@ export default function select() {
         displaySelect(sort, selectSortId, currentSelect);
 
     };
+    const settingsDisplay = function() {
+
+        //current select settings
+
+        let currentSelect = {
+            name: 'Profile',
+            id: 'profile'
+        };
+
+        //id of select settings
+        const selectSettingsId = 'select-settings';
+
+        //array of settings objects
+        const settings = [
+            { name: 'Profile', id: 'profile' },
+            { name: 'Theme', id: 'theme' }
+        ];
+
+
+        //call the function to display select years 
+        displaySelect(settings, selectSettingsId, currentSelect);
+
+    };
 
     //inizialisation of selects
     if (name === 'calendar') {
@@ -185,6 +208,8 @@ export default function select() {
         sortDisplay()
     } else if (name === 'home') {
 
+    } else if (name === 'settings') {
+        settingsDisplay()
     }
 
 }

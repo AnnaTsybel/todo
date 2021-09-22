@@ -1,5 +1,5 @@
 export default function contentMain() {
-    const name = 'home';
+    const name = 'settings';
 
     function createElement(tag, className) {
 
@@ -60,7 +60,7 @@ export default function contentMain() {
 
     } else if (name === 'home') {
 
-
+        //create section
         let createElem = createElement('section', 'slider');
         createElem.classList.add('section');
 
@@ -96,7 +96,6 @@ export default function contentMain() {
         //append elements of slider in wrapper
         sliderWrapper.append(sliderItems, sliderButtonLeft, sliderButtonRight);
 
-
         const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis consectetur egestas. Mauris erat nulla, accumsan in  cursus in, sodales maximus orci. Praesent pcursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orcicursus in, sodales maximus orci'
         const homePageTitle = createElement('h1', 'section__header');
         const Pagetitle = "About";
@@ -104,6 +103,12 @@ export default function contentMain() {
         const homePageInfo = createElement('p', 'section__text-info');
         homePageInfo.innerHTML = text;
         createElem.append(sliderWrapper, homePageTitle, homePageInfo);
+        return createElem;
+
+    } else if (name === 'settings') {
+        let createElem = createElement('section', 'section');
+        createElem.classList.add('section-settings');
+
         return createElem;
     }
 
