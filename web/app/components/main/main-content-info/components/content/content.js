@@ -1,5 +1,5 @@
-export default function contentMain() {
-    const name = 'settings';
+export default function contentMain(name) {
+
 
     function createElement(tag, className) {
 
@@ -19,7 +19,7 @@ export default function contentMain() {
         //return content
         return createElem;
 
-    } else if (name === 'tasks') {
+    } else if (name === 'project') {
 
         //create tag for tasks
         let createElem = createElement('section', 'tasks');

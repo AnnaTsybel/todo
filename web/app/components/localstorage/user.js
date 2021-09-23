@@ -5,8 +5,8 @@ export default function usersStorage() {
         surname: 'dsgvds',
         password: '131',
         login: 'kek',
-        email: 'oleg123@gmail.com'
-
+        email: 'oleg123@gmail.com',
+        photo: 'https://klike.net/uploads/posts/2019-07/1564314090_3.jpg'
     }
 
     localStorage.setItem(`users`, JSON.stringify(users))

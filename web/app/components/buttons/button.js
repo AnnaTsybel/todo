@@ -1,5 +1,5 @@
-export default function button() {
-    const name = 'home';
+export default function button(name) {
+
 
     function createElement(tag, className) {
 

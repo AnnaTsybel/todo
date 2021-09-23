@@ -1,7 +1,7 @@
-export default function header() {
+export default function header(name) {
     let user = JSON.parse(localStorage.getItem('users'));
-    const name = 'settings';
-    if (name !== 'login-enter' && 'login-registration') {
+
+    if (name !== 'login-enter' && name !== 'login-registration' || !name) {
         function createElement(tag, className) {
             const element = document.createElement(tag);
 
@@ -11,7 +11,7 @@ export default function header() {
 
             return element;
         }
-        const header = document.querySelector('.header');
+        const header = createElement('header', 'header');
 
         const headerInfo = createElement('div', 'header__info');
         const headerHelp = createElement('a', 'header__help');
@@ -47,6 +47,7 @@ export default function header() {
         headerChangeTheme.append(headerChangeThemeLight, headerChangeThemeDarkLabel, headerChangeThemeBackground, headerChangeThemeDark, headerChangeThemeLightLabel)
 
         header.append(headerInfo, headerChangeTheme);
+        return header;
 
     }
 }

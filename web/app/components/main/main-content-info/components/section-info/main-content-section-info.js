@@ -1,5 +1,5 @@
-export default function sectionInfo(elements) {
-    const name = 'settings';
+export default function sectionInfo(name, elements) {
+
 
     function createElement(tag, className) {
 
@@ -28,7 +28,7 @@ export default function sectionInfo(elements) {
     if (name === 'calendar') {
         let calendar = createSection('Calendar', elements);
         return calendar;
-    } else if (name === 'tasks') {
+    } else if (name === 'project') {
         let tasks = createSection('Projects', elements);
         return tasks;
     } else if (name === 'home') {

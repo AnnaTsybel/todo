@@ -10,7 +10,6 @@ const uglify = require('gulp-uglify-es').default;
 
 var sass = require('gulp-sass')(require('sass'));
 
-
 const autoprefixer = require('gulp-autoprefixer');
 
 const cleancss = require('gulp-clean-css');
@@ -64,9 +63,9 @@ function cleanimg() {
 
 function buildcopy() {
     return src([ // Выбираем нужные файлы
-            'app/css/**/*.min.css',
-            'app/js/**/*.min.js',
-            'app/images/dest/**/*',
+            'app/src/css/**/*.min.css',
+            'app//*.min.js',
+            'app/static/images/dest/**/*',
             'app/**/*.html',
         ], { base: 'app' })
         .pipe(dest('dist'))
@@ -88,7 +87,7 @@ function startwatch() {
     watch('app/**/*.html').on('change', browserSync.reload);
 
     // Мониторим папку-источник изображений и выполняем images(), если есть изменения
-    watch('app/images/src/**/*', images);
+    watch('app/static/images/src/**/*', images);
 
 }
 

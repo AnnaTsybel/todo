@@ -1,8 +1,8 @@
-export default function select() {
-    const name = 'settings';
+export default function select(name) {
+
     const dropdowns = [{
             id: 'select-sort',
-            page: 'tasks'
+            page: 'project'
         },
         {
             id: 'select-month',

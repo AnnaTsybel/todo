@@ -1,4 +1,4 @@
-export default function main(elements) {
+export default function main(header, mainInfoContent) {
 
     function createElement(tag, className) {
         const element = document.createElement(tag);
@@ -9,11 +9,8 @@ export default function main(elements) {
 
         return element;
     }
-
-    const content = createElement('div', 'content');
-    content.append(...elements);
-    return content;
-
-
+    const mainInfo = createElement('main', 'main-info');
+    mainInfo.append(header, mainInfoContent);
+    return mainInfo;
 
 }

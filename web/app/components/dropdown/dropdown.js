@@ -1,5 +1,5 @@
-export default function select() {
-    const name = 'settings';
+export default function select(name) {
+
     let displaySelect = function(arrayOfObj, id, currentSelect) {
         //get element which will be displayed
         const selectObj = document.getElementById(`${id}`);
@@ -204,7 +204,7 @@ export default function select() {
     if (name === 'calendar') {
         monthesDisplay();
         yearsDisplay();
-    } else if (name === 'tasks') {
+    } else if (name === 'project') {
         sortDisplay()
     } else if (name === 'home') {
 

@@ -1,5 +1,5 @@
-export default function modalCreate() {
-    const name = 'home';
+export default function modalCreate(name) {
+
     //fucntion to create elements with classes
     function createElement(tag, className) {
 
@@ -24,9 +24,12 @@ export default function modalCreate() {
         return modalClose;
     }
     //function to create close button
-    function createSubmitButton(contentOffButton) {
+    function createSubmitButton(contentOffButton, id) {
         const modalButtonContainer = createElement('div', 'modal__buttons');
         const modalButton = createElement('button', 'modal__button');
+        if (id) {
+            modalButton.setAttribute('id', id)
+        }
         modalButton.textContent = contentOffButton;
         modalButtonContainer.appendChild(modalButton);
         return modalButtonContainer;
@@ -44,7 +47,7 @@ export default function modalCreate() {
         modalHeader.textContent = 'Do you realy want to logout?';
 
         //create  button
-        const modalButtonSubmit = createSubmitButton('Yes')
+        const modalButtonSubmit = createSubmitButton('Yes', 'logout-button');
 
         modalContent.append(modalClose, modalHeader, modalButtonSubmit)
         return modalContent;
@@ -230,17 +233,17 @@ export default function modalCreate() {
             content: createModalCalendar()
         }, {
             id: 'task-add',
-            page: 'tasks',
+            page: 'project',
             content: modalAdd
         },
         {
             id: 'modal-edit',
-            page: 'tasks',
+            page: 'project',
             content: modalEdit
         },
         {
             id: 'modal-delete',
-            page: 'tasks',
+            page: 'project',
             content: createModalDeleteTasks()
         },
     ]

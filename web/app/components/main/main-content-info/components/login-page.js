@@ -1,5 +1,5 @@
-export default function loginPage() {
-    const name = 'login-registration';
+export default function loginPage(name) {
+
 
     function createElement(tag, className) {
         const element = document.createElement(tag);
@@ -10,9 +10,20 @@ export default function loginPage() {
 
         return element;
     }
-    const main = document.querySelector('.login-page');
+    const content = createElement('main', 'login-page');
+    const circlesAnimated = [];
+    for (let i = 0; i < 6; i++) {
+        const circle = createElement('div', `login-page__circle--animated${i+1}`);
+        circlesAnimated.push(circle);
+    }
 
-    function createLoginForm(helpText, helpTextspan, activeClass, inputs) {
+    function createLoginForm(helpText, helpTextspan, activeClass, link, inputs) {
+
+
+
+        //append circles into main
+
+
         //create content 
         const loginPageContent = createElement('div', 'login-page__content');
 
@@ -33,7 +44,7 @@ export default function loginPage() {
         //check what type is active
         if (activeClass === 'enter') {
             loginPageTypeEnter.classList.add('active-form');
-        } else if (activeClass === 'register') {
+        } else if (activeClass === 'registration') {
             loginPageTypeRegister.classList.add('active-form');
         }
 
@@ -62,11 +73,13 @@ export default function loginPage() {
         //create password input button to enter opportunity of see password
         const loginPagePasswordIcon = createElement('a', 'password_control');
         loginPagePasswordIcon.setAttribute('a', '#');
+
         loginPagePassword.append(loginPagePasswordInput, loginPagePasswordIcon);
 
         //create submit button
         const loginPageSubmit = createElement('button');
-        loginPageSubmit.setAttribute('type', 'submit')
+        loginPageSubmit.setAttribute('type', 'submit');
+        loginPageSubmit.setAttribute('id', '/home');
         loginPageSubmit.innerHTML = helpTextspan;
 
         //append inputs and buttons into form
@@ -78,7 +91,9 @@ export default function loginPage() {
 
         //create login page help text
         const loginPageHelp = createElement('a', 'login-page__help');
+        loginPageHelp.classList.add('go-to-page')
         loginPageHelp.setAttribute('a', '#');
+        loginPageHelp.setAttribute('id', link);
         const loginPageHelpSpan = createElement('span');
         loginPageHelpSpan.innerHTML = 'Login';
         loginPageHelp.append(helpText, loginPageHelpSpan);
@@ -91,21 +106,23 @@ export default function loginPage() {
         }
         loginPageContent.append(loginPageHeader, loginPageTypes, loginPageForm, loginPageHelp, ...circles);
 
-        main.appendChild(loginPageContent)
+        return loginPageContent
 
     }
 
-
+    let a;
     if (name === 'login-enter') {
         const active = 'enter';
         const txt = 'Do not have account ';
-        const txtSpan = 'register';
+        const txtSpan = 'registration';
+        const link = '/login-registration';
 
-        createLoginForm(txt, txtSpan, active)
-    } else {
-        const active = 'register';
+        a = createLoginForm(txt, txtSpan, active, link)
+    } else if (name === 'login-registration') {
+        const active = 'registration';
         const txt = 'Already on account ';
         const txtSpan = 'Login ';
+        const link = '/login-enter';
         //create input name
         const loginPageNameInput = createElement('input');
         loginPageNameInput.setAttribute('type', 'text');
@@ -125,17 +142,13 @@ export default function loginPage() {
         loginPageSurnameInput.setAttribute('placeholder', 'Surname')
         const inputs = [loginPageNameInput, loginPageSurnameInput, loginPageEmailInput];
 
-        createLoginForm(txt, txtSpan, active, inputs)
+        a = createLoginForm(txt, txtSpan, active, link, inputs)
     }
+    content.append(a, ...circlesAnimated)
+    console.log(content)
+    return content;
 
     //create animated circles
-    const circlesAnimated = [];
-    for (let i = 0; i < 6; i++) {
-        const circle = createElement('div', `login-page__circle--animated${i+1}`);
-        circlesAnimated.push(circle);
-    }
 
-    //append circles into main
-    main.append(...circlesAnimated)
 
 }
