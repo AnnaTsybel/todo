@@ -96,7 +96,7 @@ export default function modalCreate(name) {
         return elementCategoriesContainer;
     }
 
-    function createModalEditAdd(elementTag, elem) {
+    function createModalEditAdd(elementTag, elem, header) {
         //create the tag to drop content into it
         const modalContent = createElement('div', 'modal__content');
 
@@ -105,7 +105,7 @@ export default function modalCreate(name) {
 
         //create header of modal
         const modalHeader = createElement('h1', 'modal__header');
-        modalHeader.innerHTML = 'Edit task';
+        modalHeader.innerHTML = header;
 
         //create form of edit modal
         const modalForm = createElement('form', 'modal__form');
@@ -188,8 +188,8 @@ export default function modalCreate(name) {
         return modalContent;
     }
 
-    const modalEdit = createModalEditAdd('modal-edit', 'edit');
-    const modalAdd = createModalEditAdd('modal-add', 'add');
+    const modalEdit = createModalEditAdd('modal-edit', 'edit', 'Edit task');
+    const modalAdd = createModalEditAdd('modal-add', 'add', 'Add task');
     //function to create delete tasks modal
     function createModalDeleteTasks() {
 

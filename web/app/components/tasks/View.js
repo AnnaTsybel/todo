@@ -2,11 +2,18 @@ export default class View {
     constructor(model) {
         this.model = model;
         this.currentDate();
-        this.displayTodo(this.model);
-        this.EditTodo(this.model);
-        this.DeleteTodo(this.model);
-        this.moveTodo(this.model)
-
+        this.displayTodo(this.model.models);
+        this.EditTodo(this.model.models);
+        this.DeleteTodo(this.model.models);
+        this.moveTodo(this.model.models);
+        this.buttonTasks.addEventListener('click', () => {
+            let a = this.sortTag.getAttribute('id');
+            this.cleanTodo();
+            this.displayTodo(this.filterTasks(a, this.model));
+            this.EditTodo(this.filterTasks(a, this.model));
+            this.DeleteTodo(this.filterTasks(a, this.model));
+            this.moveTodo(this.filterTasks(a, this.model));
+        })
     }
 
     createElement(tag, className) {
@@ -24,7 +31,7 @@ export default class View {
         return document.querySelector(selector);
     }
 
-    currentDate = () => {
+    currentDate() {
 
         this.date = new Date();
         this.year = this.date.getFullYear();
@@ -33,6 +40,7 @@ export default class View {
     }
 
     createTodo(data, parentElem) {
+
         //create button edit
         this.buttonEdit = this.createElement('a', 'task__button-edit');
         this.buttonEdit.setAttribute('href', `#modal-task-edit-${data.id}`)
@@ -80,7 +88,13 @@ export default class View {
         this.tasksTodo = this.getElement('#tasks-to-do');
         this.tasksInProgress = this.getElement('#tasks-in-progress');
         this.tasksCompleted = this.getElement('#tasks-completed');
-        data.models.forEach(element => {
+        //button which will switch selected date on calendar
+        this.buttonTasks = this.getElement('#button-project');
+        //current states of sort
+        this.sortTag = this.getElement('#select-sort').querySelector('.select__current');
+
+
+        data.forEach(element => {
 
             if (element.status === "completed") {
                 this.taskCompleted = this.createElement('div', `task-completed-${element.categorie}`);
@@ -105,7 +119,11 @@ export default class View {
             }
         });
     }
-
+    cleanTodo() {
+        this.tasksTodo.innerHTML = '';
+        this.tasksInProgress.innerHTML = '';
+        this.tasksCompleted.innerHTML = '';
+    }
 
     generateDate(day, month, year) {
 
@@ -130,6 +148,7 @@ export default class View {
         bodyOpen.classList.add('open');
         modal.addEventListener('click', function(el) {
             if (!el.target.closest('.modal__content')) {
+
                 this.closeModal(modal);
             }
         })
@@ -147,7 +166,7 @@ export default class View {
         let modalClose = document.querySelectorAll('.modal-close');
 
         //enumeration of elements of tasks array
-        data.models.forEach(el => {
+        data.forEach(el => {
 
             //enumeration of elements of modal edit buttons
             for (let i = 0; i < modalLinksEdit.length; i++) {
@@ -212,8 +231,6 @@ export default class View {
         if (modalClose.length > 0) {
 
             for (let i = 0; i < modalClose.length; i++) {
-
-
                 //add event listeners on each of them
                 modalClose[i].addEventListener('click', el => {
                     let modal = modalClose[i].closest('.modal');
@@ -238,7 +255,7 @@ export default class View {
 
 
 
-        data.models.forEach(el => {
+        data.forEach(el => {
 
             //enumeration of elements of modal edit buttons
             for (let i = 0; i < modalLinksDelete.length; i++) {
@@ -309,7 +326,7 @@ export default class View {
         const coordsCompleted = getCoords(taskCompleted);
         const coordsInprogress = getCoords(taskProgress);
 
-        data.models.forEach(el => {
+        data.forEach(el => {
 
 
             for (let i = 0; i < taskList.length; i++) {
@@ -382,7 +399,6 @@ export default class View {
                             } else if (checkTasks(e, coordsInprogress)) {
 
                                 currentTask.className = '';
-                                console.log(monthCurrent, yearCurrent);
                                 if (yearCurrent < el.year || (yearCurrent === el.year && el.month < monthCurrent) || (yearCurrent === el.year && monthCurrent === el.month && el.day < dayCurrent)) {
                                     currentTask.classList.add('overdue')
                                 }
@@ -422,8 +438,49 @@ export default class View {
 
             }
 
-        })
+        });
 
+
+
+    }
+    filterTasks(input, data) {
+        const date1 = new Date();
+        let arr = [];
+
+        function getWeek(data) {
+            if (data < 7) {
+                return 1;
+            } else {
+                return (data - data % 7) / 7;
+            }
+        }
+        if (input === 'all') {
+            return data.models;
+
+        } else if (input === 'this-week') {
+            data.models.forEach(function(el) {
+                if (date1.getFullYear() === el.year && date1.getMonth() === el.month && getWeek(date1.getDate()) === getWeek(el.day)) {
+                    arr.push(el);
+                }
+            })
+
+        } else if (input === 'this-month') {
+            data.models.forEach(function(el) {
+                if (date1.getFullYear() === el.year && date1.getMonth() === el.month) {
+                    arr.push(el);
+                }
+
+            })
+
+        } else if (input === 'this-day') {
+            data.models.forEach(function(el) {
+                if (date1.getFullYear() === el.year && date1.getMonth() === el.month && date1.getDate() === el.day) {
+                    arr.push(el);
+                }
+
+            })
+        }
+        return arr;
 
     }
 

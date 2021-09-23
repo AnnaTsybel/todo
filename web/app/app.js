@@ -81,7 +81,7 @@ window.addEventListener('load', function(el) {
             })
         })
     } else {
-        alert('1')
+
         root.append(...modalCreate(currentPath), pagesGenerate());
         contentGenerated(routes[pathname]);
         generatePageContent(routes[pathname]);

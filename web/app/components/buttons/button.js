@@ -19,10 +19,10 @@ export default function button(name) {
         page: 'calendar',
         parent: 'section-info'
     }, {
-        id: 'button-tasks',
+        id: 'button-project',
         classes: 'section-info__button',
         text: 'Change',
-        page: 'tasks',
+        page: 'project',
         parent: 'section-info'
     }]
 

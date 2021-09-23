@@ -3,7 +3,6 @@ export default class View {
     constructor(model) {
         this.model = model;
         this.displayCalendar(this.model);
-
         this.displayModal(this.model);
 
         this.buttonCalendar.addEventListener('click', () => {
@@ -66,8 +65,8 @@ export default class View {
     }
 
     calendarRassing(date, dataOfTask) {
-        console.log(dataOfTask.models)
-            //array output 
+
+        //array output 
         const calendar = this.calendarFill(date);
 
         //array of days in week
@@ -280,13 +279,15 @@ export default class View {
                     calendarModal.append(modalClose, modalTaskTittle, modalTaskDescription, modalTaskDeadline);
 
                     let modalClosed = document.querySelectorAll('.modal-close');
-                    console.log(modalClosed);
+
+
                     if (modalClosed.length > 0) {
                         for (let i = 0; i < modalClosed.length; i++) {
+                            console.log(modalClosed)
                             modalClosed[i].addEventListener('click', el => {
-                                let modal = modalClosed[i].closest('.modal');
-                                closeModal(modal);
                                 el.preventDefault();
+                                closeModal(modalClosed[i].closest('.modal'));
+
                             })
                         }
                     }
@@ -304,7 +305,6 @@ export default class View {
 
                     //get parent modal tag
                     let modal = calendarModal.closest('.modal');
-                    let modalContent = modal.querySelector('.modal__content');
                     const modalClose = this.createElement('div', 'modal__close');
                     const modalCloseButton = this.createElement('a', 'modal__button-close');
                     modalCloseButton.setAttribute('href', '#')
@@ -336,14 +336,7 @@ export default class View {
 
             }
         }
-        let modalClosed = document.querySelector('.modal-close');
-        console.log(modalClosed);
-        modalClosed.addEventListener('click', function(el) {
-            console.log(2);
-            let modal = modalClosed.closest('.modal');
-            closeModal(modal);
-            el.preventDefault();
-        })
+
     }
 
 
